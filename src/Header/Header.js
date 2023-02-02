@@ -5,17 +5,12 @@ const Header = () => {
   return (
     <section className="header-section">
       <div className="header-content">
-        <header>Long Lake Music Festival</header>
+        <header className="header-title">Long Lake Music Festival</header>
         <div className="header-links-container">
-          <Button variant="outline-primary">Primary</Button>{" "}
-          <Button variant="secondary">Secondary</Button>{" "}
-          <Button variant="success">Success</Button>{" "}
-          <Button variant="warning">Warning</Button>{" "}
-          <Button variant="danger">Danger</Button>{" "}
-          <Button variant="info">Info</Button>{" "}
-          <Button variant="light">Light</Button>{" "}
-          <Button variant="dark">Dark</Button>
-          <Button variant="link">Link</Button>
+          <Button className="header-button"variant="custom">Tickets</Button>{" "}
+          <Button variant="secondary">Donate</Button>{" "}
+          <Button variant="success">Sign up for emails</Button>{" "}
+          <Button variant="warning">Contact</Button>
           {/* <button className="header-link">Tickets</button>
           <button className="header-link">Donate</button>
           <button className="header-link">Sign up for emails</button>

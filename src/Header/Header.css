@@ -9,13 +9,14 @@
 }
 
 .header-content > header {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: bold;
 }
 
 .header-links-container {
   display: flex;
   gap: 1rem;
+  font-family:'Source Sans Pro', sans-serif;
 }
 
 .header-link {
@@ -23,4 +24,12 @@
   border-radius: 1rem;
   cursor: pointer;
   padding: 1rem 2rem;
+  font-size: 3rem;
 }
+
+.header-title {
+  color: #284B63;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+}
+
