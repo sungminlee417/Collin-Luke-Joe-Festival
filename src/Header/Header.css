@@ -1,0 +1,26 @@
+.header-section {
+  padding: 2rem;
+}
+
+.header-content {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-content > header {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.header-links-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.header-link {
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  padding: 1rem 2rem;
+}
