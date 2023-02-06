@@ -1,20 +1,3 @@
-/*!
-
- =========================================================
- * Paper Kit React - v1.3.1 based on Paper Kit - v2.2.0
- =========================================================
-
- * Product Page: https://www.creative-tim.com/product/paper-kit-2
- * Copyright 2022 Creative Tim (http://www.creative-tim.com)
-
- * Designed by www.invisionapp.com Coded by www.creative-tim.com
-
- =========================================================
-
- * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
- */
-/*      light colors - used for select dropdown         */
 /* ========================================================================
  * bootstrap-switch - v3.3.2
  * http://www.bootstrap-switch.org
@@ -7171,7 +7154,9 @@ License - nucleoapp.com/license/
   .presentation-page
     .section-icons
     .icons-nucleo
-    .nc-icon:not(.ninth-left-icon):not(.seventh-left-icon):not(.third-left-icon) {
+    .nc-icon:not(.ninth-left-icon):not(.seventh-left-icon):not(
+      .third-left-icon
+    ) {
     display: none !important;
   }
   .bootstrap-datetimepicker-widget {
