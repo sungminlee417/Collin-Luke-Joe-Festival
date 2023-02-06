@@ -71,7 +71,7 @@ function IndexNavbar() {
             target="_blank"
             title="Coded by Creative Tim"
           >
-            Paper Kit React
+            Long Lake Music Festival
           </NavbarBrand>
           <button
             aria-expanded={navbarCollapse}
@@ -92,15 +92,15 @@ function IndexNavbar() {
         >
           <Nav navbar>
             <NavItem>
-              <NavLink
-                data-placement="bottom"
-                href="https://twitter.com/CreativeTim?ref=creativetim"
-                target="_blank"
-                title="Follow us on Twitter"
-              >
-                <i className="fa fa-twitter" />
-                <p className="d-lg-none">Twitter</p>
-              </NavLink>
+                <Button
+                      className="btn-round mr-1"
+                      // color="primary"
+                      outline
+                      style={{backgroundColor:'#3C6E71'}}
+                      type="button"
+                    >
+                      Primary
+                </Button>
             </NavItem>
             <NavItem>
               <NavLink
