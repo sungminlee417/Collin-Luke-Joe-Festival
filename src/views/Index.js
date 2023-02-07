@@ -22,6 +22,7 @@ import SectionLogin from "views/index-sections/SectionLogin.js";
 import SectionExamples from "views/index-sections/SectionExamples.js";
 import SectionDownload from "views/index-sections/SectionDownload.js";
 import SectionBiographies from "./index-sections/SectionBiographies/SectionBiographies";
+import SectionContactForm from "./index-sections/SectionContactForm/ContactForm";
 
 function Index() {
   document.documentElement.classList.remove("nav-open");
@@ -37,6 +38,7 @@ function Index() {
       <IndexHeader />
       <div className="main">
         <SectionBiographies />
+        <SectionContactForm />
         <SectionButtons />
         <SectionNavbars />
         <SectionNavigation />

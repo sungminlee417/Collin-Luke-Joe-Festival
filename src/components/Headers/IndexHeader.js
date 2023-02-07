@@ -29,7 +29,7 @@ function IndexHeader() {
               </div>
             </div>
             <h2 className="presentation-subtitle text-center">
-              Collin Holloway, Luke Benedict, and Joe.
+              Description. 
             </h2>
           </Container>
         </div>
