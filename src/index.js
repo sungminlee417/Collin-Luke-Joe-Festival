@@ -20,7 +20,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
     <Switch>
-      <Route path="/" render={(props) => <Index {...props} />} />
+      <Route exact path="/" render={(props) => <Index {...props} />} />
       <Route
         path="/nucleo-icons"
         render={(props) => <NucleoIcons {...props} />}
