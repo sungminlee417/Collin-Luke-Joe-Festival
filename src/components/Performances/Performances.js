@@ -1,13 +1,22 @@
 import IndividualPerformance from "./IndividualPerformance/IndividualPerformance";
+import "./Performances.css";
 
 const Performances = () => {
   return (
-    <section>
-      <ul>
-        <li>
-          <IndividualPerformance />
-        </li>
-      </ul>
+    <section id="performances-section">
+      <div className="performances-container">
+        <ul className="performances-list">
+          <li>
+            <IndividualPerformance />
+          </li>
+          <li>
+            <IndividualPerformance />
+          </li>
+          <li>
+            <IndividualPerformance />
+          </li>
+        </ul>
+      </div>
     </section>
   );
 };
