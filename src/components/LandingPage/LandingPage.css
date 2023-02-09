@@ -1,0 +1,19 @@
+.landing-page {
+    background-image: url("../../images/sample_landing_page.jpg");
+    background-position: 50% 40%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    height: 80rem;
+    width: 100%;
+}
+
+.landing-page-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    vertical-align: auto;
+    text-align: center;
+}
