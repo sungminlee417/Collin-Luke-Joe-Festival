@@ -1,15 +1,13 @@
 import Card from "react-bootstrap/Card";
-
-import image1 from "../../../images/image1.jpg";
-import image2 from "../../../images/image2.webp";
+import Col from "react-bootstrap/Col";
 
 import "./IndividualPerformance.css";
 
-const IndividualPerformance = () => {
+const IndividualPerformance = ({ image }) => {
   return (
-    <>
+    <Col>
       <Card className="individual-performance-container">
-        <Card.Img variant="top" bs-prefix="card-img" src={image1} />
+        <Card.Img variant="top" bs-prefix="card-img" src={image} />
         <Card.Body>
           <Card.Text className="individual-performance-text">
             Some quick example text to build on the card title and make up the
@@ -17,7 +15,7 @@ const IndividualPerformance = () => {
           </Card.Text>
         </Card.Body>
       </Card>
-    </>
+    </Col>
   );
 };
 

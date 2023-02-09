@@ -1,22 +1,20 @@
 import IndividualPerformance from "./IndividualPerformance/IndividualPerformance";
+
+import Row from "react-bootstrap/Row";
+
+import image1 from "../../images/image1.jpg";
+
 import "./Performances.css";
 
 const Performances = () => {
   return (
-    <section id="performances-section">
-      <div className="performances-container">
-        <ul className="performances-list">
-          <li>
-            <IndividualPerformance />
-          </li>
-          <li>
-            <IndividualPerformance />
-          </li>
-          <li>
-            <IndividualPerformance />
-          </li>
-        </ul>
-      </div>
+    <section className="performances-section">
+      <Row xs={1} md={2} className="g-4 performances-list">
+        <IndividualPerformance image={image1} />
+        <IndividualPerformance image={image1} />
+        <IndividualPerformance image={image1} />
+        <IndividualPerformance image={image1} />
+      </Row>
     </section>
   );
 };

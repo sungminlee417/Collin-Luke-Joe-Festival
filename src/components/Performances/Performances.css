@@ -1,6 +1,4 @@
 .performances-list {
-  display: flex;
-  gap: 4rem;
   padding: 4rem;
   list-style: none;
 }
