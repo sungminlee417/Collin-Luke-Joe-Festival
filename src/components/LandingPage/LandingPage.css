@@ -8,6 +8,7 @@
     width: 100%;
 }
 
+
 .landing-page-title {
     display: flex;
     flex-direction: column;
@@ -16,4 +17,10 @@
     margin: auto;
     vertical-align: auto;
     text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 13rem;
+    padding-top: 20rem;
+    color:#353535;
+    line-height: 13rem;
+
 }

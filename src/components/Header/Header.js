@@ -1,8 +1,20 @@
-import "./Header.css"
+import "./Header.css";
+import { useState, useEffect } from "react";
 
 const Header = () => {
+    const [scroll, setScroll] = useState(false);
+    useEffect(() => {
+        window.onscroll = function () {
+          if (window.scrollY > 50) {
+            setScroll(true);
+          } else {
+            setScroll(false);
+          }
+        };
+      }, [scroll]);
+    
     return (
-        <div className="landing-header">
+        <div className={scroll ? "landing-header-scrolled":"landing-header"}>
             <div className="landing-header-name">
                 LONG LAKE MUSIC FESTIVAL
             </div>
