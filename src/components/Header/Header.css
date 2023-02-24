@@ -35,6 +35,5 @@
     color:#3C6E71;
 }
 .landing-header-link:hover {  
-    cursor: pointer;
-    filter: brightness(50%);
+    color: #2c5153;
 }

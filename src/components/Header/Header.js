@@ -30,7 +30,7 @@ const Header = () => {
             <div className="landing-header-links">
                 <div className="landing-header-link">TICKETS</div>
                 <div className="landing-header-link">DONATE</div>
-                <div className="landing-header-link">SIGN UP FOR EMAILS</div>
+                <div className="landing-header-link" onClick={() => {scrollSmoothlyTo("newsletter-section");}}>SIGN UP FOR EMAILS</div>
                 <div className="landing-header-link" onClick={() => {scrollSmoothlyTo("contact-section");}}>CONTACT</div>
             </div>
         </div>

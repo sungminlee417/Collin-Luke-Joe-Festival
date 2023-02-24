@@ -1,0 +1,27 @@
+.newsletter-content {
+    background-image: url("../../images/sample_band.jpg");
+    background-position: 50% 40%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80rem;
+    width: 100%;
+}
+
+.newsletter-container {
+    position:relative;
+    top: 15rem;
+    left: 10rem;
+    height: 50rem;
+    background-color: #284B63;
+    color:white;
+    width: 60rem;
+    opacity: 95%;
+    padding: 3rem;
+}
+
+.newsletter-form {
+    text-align: left;
+    opacity: 1;
+    font-size: 5rem;
+    font-family: 'Playfair Display', serif;
+}
