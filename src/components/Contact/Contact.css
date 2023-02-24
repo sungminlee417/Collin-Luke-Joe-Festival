@@ -1,4 +1,4 @@
-.contact-section-content {
+.contact-section {
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -71,6 +71,7 @@
     border-radius: 0.2rem;
     height: 5rem;
 }
+
 
 .successful-message {
     font-family: "Source Sans Pro", sans-serif;

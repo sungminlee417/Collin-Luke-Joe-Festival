@@ -62,7 +62,7 @@ export const Contact = () => {
   };
 
   return (
-    <div className="contact-section-content">
+    <div className="contact-section">
         <div className="contact-section-header">Contact Us</div>
         <div className="contact-content">
             <form className="contact-form" ref={form} onSubmit={sendEmail}>
