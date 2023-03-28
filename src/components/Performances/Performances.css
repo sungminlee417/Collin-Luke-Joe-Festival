@@ -1,4 +1,13 @@
+.performances-section {
+  padding: 10rem;
+}
+
+.performances-section > h3 {
+  text-align: start;
+}
+
 .performances-list {
-  padding: 4rem;
+  gap: 4rem;
   list-style: none;
+  padding: 0;
 }

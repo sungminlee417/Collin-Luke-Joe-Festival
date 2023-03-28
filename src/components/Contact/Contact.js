@@ -62,67 +62,64 @@ export const Contact = () => {
   };
 
   return (
-    <div className="contact-section">
-        <div className="contact-section-header">Contact Us</div>
-        <div className="contact-content">
-            <form className="contact-form" ref={form} onSubmit={sendEmail}>
-            <div className="contact-input-section">
-                <div className="contact-input-first-line">
-                    <div className="contact-input-name">
-                        Name
-                        <input
-                            className="contact-input"
-                            placeholder="Name"
-                            type="text"
-                            name="user_name"
-                            value={name}
-                            onChange={(e) => setName(e.target.value)}
-                        />
-                        <p className="error-message" id="error-name">
-                            A valid name is required
-                        </p>
-                    </div>
-                    <div className="contact-input-email">
-                        Email
-                        <input
-                            className="contact-input"
-                            placeholder="Email"
-                            type="text"
-                            name="user_email"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                        />
-                        <p className="error-message" id="error-email">
-                            A valid email is required
-                        </p>
-                    </div>
-                </div>
-                <div className="contact-input-message">
-                    Message
-                    <textarea
-                    className="contact-input contact-message-input"
-                    placeholder="Message"
-                    name="message"
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
-                    />
-                    <p className="error-message" id="error-message">
-                    A valid message is required
-                    </p>
-                    <button className="submit-contact-form" type="submit">
-                    SEND MESSAGE
-                    </button>
-                    {submitted && (
-                    <div className="successful-message">
-                        Thank you! Your submission has been received.
-                    </div>
-                    )}
-                </div>
+    <div className="flex flex-col m-20 gap-10">
+      <div className="text-8xl font-thin tracking-wide">Contact Us</div>
+      <div>
+        <form className="w-fit m-auto" ref={form} onSubmit={sendEmail}>
+          <div className="grid grid-cols-2 gap-10">
+            <div className="contact-input-name">
+              Name
+              <input
+                className="contact-input"
+                placeholder="Name"
+                type="text"
+                name="user_name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
+              <p className="error-message" id="error-name">
+                A valid name is required
+              </p>
             </div>
-            </form>
-        </div>
+            <div className="contact-input-email">
+              Email
+              <input
+                className="contact-input"
+                placeholder="Email"
+                type="text"
+                name="user_email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              <p className="error-message" id="error-email">
+                A valid email is required
+              </p>
+            </div>
+            <div className="contact-input-message col-span-2">
+              Message
+              <textarea
+                className="contact-input contact-message-input"
+                placeholder="Message"
+                name="message"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+              />
+              <p className="error-message" id="error-message">
+                A valid message is required
+              </p>
+              <button className="submit-contact-form" type="submit">
+                SEND MESSAGE
+              </button>
+              {submitted && (
+                <div className="successful-message">
+                  Thank you! Your submission has been received.
+                </div>
+              )}
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
-
   );
 };
 

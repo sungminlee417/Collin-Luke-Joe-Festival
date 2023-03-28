@@ -1,5 +1,5 @@
-.individual-performance-text {
-  font-size: 1.4rem;
-  padding: 0.2rem;
-  text-align: start;
+.individual-performance-image {
+  height: 40rem;
+  object-fit: cover;
+  /* width: 30rem; */
 }
