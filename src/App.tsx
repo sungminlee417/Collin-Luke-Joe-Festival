@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
-import Header from "./components/Header/Header";
-import LandingPage from "./components/LandingPage/LandingPage";
+import Header from "./components/Navigation";
+import LandingPage from "./components/LandingPage";
 import Performances from "./components/Performances/Performances";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";

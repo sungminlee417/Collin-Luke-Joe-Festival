@@ -62,7 +62,7 @@ export const Contact = () => {
   };
 
   return (
-    <div className="flex flex-col m-20 gap-10">
+    <div className="contact-section flex flex-col m-20 gap-10">
       <div className="text-8xl font-thin tracking-wide">Contact Us</div>
       <div>
         <form className="w-fit m-auto" ref={form} onSubmit={sendEmail}>

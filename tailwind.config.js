@@ -13,6 +13,13 @@ module.exports = {
         224: "56rem",
         240: "60rem",
       },
+      fontFamily: {
+        playfair: ["Playfair Display", "serif"],
+        source: ["Source Sans Pro", "sans-serif"],
+      },
+      fontSize: {
+        "10xl": "140px",
+      },
     },
   },
   plugins: [],
