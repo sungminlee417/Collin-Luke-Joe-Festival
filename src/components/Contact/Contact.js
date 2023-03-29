@@ -1,6 +1,4 @@
-import { useEffect, useState } from "react";
-import "./Contact.css";
-import React, { useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 
 export const Contact = () => {
@@ -65,53 +63,62 @@ export const Contact = () => {
     <div className="contact-section flex flex-col m-20 gap-10">
       <div className="text-8xl font-thin tracking-wide">Contact Us</div>
       <div>
-        <form className="w-fit m-auto" ref={form} onSubmit={sendEmail}>
+        <form className="w-240 m-auto" ref={form} onSubmit={sendEmail}>
           <div className="grid grid-cols-2 gap-10">
-            <div className="contact-input-name">
-              Name
+            <div className="flex flex-col gap-2 text-start text-[#353535] text-2xl">
+              <p>Name</p>
               <input
-                className="contact-input"
-                placeholder="Name"
+                className="p-4 rounded-md border outline-none"
                 type="text"
                 name="user_name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
               />
-              <p className="error-message" id="error-name">
+              <p
+                className="font-source font-light text-xl text-[#bf0000]"
+                id="error-name"
+              >
                 A valid name is required
               </p>
             </div>
-            <div className="contact-input-email">
-              Email
+            <div className="flex flex-col gap-2 text-start text-[#353535] text-2xl">
+              <p>Email</p>
               <input
-                className="contact-input"
-                placeholder="Email"
+                className="p-4 rounded-md border outline-none"
                 type="text"
                 name="user_email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
-              <p className="error-message" id="error-email">
+              <p
+                className="font-source font-light text-xl text-[#bf0000]"
+                id="error-email"
+              >
                 A valid email is required
               </p>
             </div>
-            <div className="contact-input-message col-span-2">
-              Message
+            <div className="flex flex-col gap-2 text-start text-[#353535] text-2xl col-span-2">
+              <p>Message</p>
               <textarea
-                className="contact-input contact-message-input"
-                placeholder="Message"
+                className="p-4 rounded-md border outline-none resize-none h-96"
                 name="message"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
               />
-              <p className="error-message" id="error-message">
+              <p
+                className="font-source font-light text-xl text-[#bf0000]"
+                id="error-message"
+              >
                 A valid message is required
               </p>
-              <button className="submit-contact-form" type="submit">
+              <button
+                className="bg-[#3c6e71] hover:bg-[#2c5153] text-white p-6 tracking-wide rounded-md"
+                type="submit"
+              >
                 SEND MESSAGE
               </button>
               {submitted && (
-                <div className="successful-message">
+                <div className="font-source">
                   Thank you! Your submission has been received.
                 </div>
               )}
