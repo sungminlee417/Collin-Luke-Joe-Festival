@@ -12,6 +12,13 @@ const LandingPage = () => {
           <div> Music Festival</div>
         </div>
       </div>
+      <div className="text-5xl italic p-10">
+        <strong>"Off The Dock Chamber Festival</strong> aims to foster an
+        invigorating concert-going experience by embracing the energy of new
+        up-and-coming artists. With the promise of providing a gateway to
+        connect with a deeply engaged classical music loving community, OTD is
+        an inspiring modern platform for emerging artists on the East Coast."
+      </div>
     </>
   );
 };

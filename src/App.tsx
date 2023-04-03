@@ -10,10 +10,10 @@ import Newsletter from "./components/Newsletter/Newsletter";
 function App() {
   return (
     <div className="App">
-      {/* <Header /> */}
+      <Header />
       <LandingPage />
       <Performances />
-      {/* <Newsletter /> */}
+      <Newsletter />
       <Contact />
       <Footer />
     </div>
