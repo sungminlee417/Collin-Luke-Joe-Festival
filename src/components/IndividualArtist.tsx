@@ -12,7 +12,7 @@ interface IndividualArtistProps {
   artist: {
     id: number;
     name: string;
-    biography: string;
+    biography: JSX.Element | string;
     images?: string[];
   };
 }
@@ -83,7 +83,7 @@ const IndividualArtist = ({ artist }: IndividualArtistProps) => {
         <div className="flex-1 text-2xl p-8 overflow-hidden rounded-bl-md">
           <div className="relative h-full">
             <div
-              className="overflow-scroll h-full"
+              className="overflow-scroll h-full flex flex-col gap-8"
               onLoad={onBiographyLoad}
               onScroll={onBiographyScroll}
             >
