@@ -53,3 +53,22 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+button {
+  position: relative;
+}
+
+/* ARTIST BIO LINK BUTTON */
+.artist-btn .underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #000;
+  transition: width 0.3s ease-in-out;
+}
+
+.artist-btn:hover .underline {
+  width: 100%;
+}

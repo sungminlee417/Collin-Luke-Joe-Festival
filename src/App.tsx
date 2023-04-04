@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import Header from "./components/Navigation";
 import LandingPage from "./components/LandingPage";
-import Performances from "./components/Performances/Performances";
+import Artists from "./components/Artists";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer";
 import Newsletter from "./components/Newsletter/Newsletter";
@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <Header />
       <LandingPage />
-      <Performances />
+      <Artists />
       <Newsletter />
       <Contact />
       <Footer />

@@ -7,7 +7,7 @@ const LandingPage = () => {
         className="h-screen bg-cover"
         style={{ backgroundImage: `url(${backgroundImage})` }}
       >
-        <div className="flex flex-col justify-center text-10xl text-[#353535] h-full font-playfair">
+        <div className="flex flex-col justify-center text-10xl text-[#353535] h-full font-playfair text-center">
           <div>Long Lake</div>
           <div> Music Festival</div>
         </div>

@@ -61,7 +61,9 @@ export const Contact = () => {
 
   return (
     <div className="contact-section flex flex-col m-20 gap-10">
-      <div className="text-8xl font-thin tracking-wide">Contact Us</div>
+      <div className="text-8xl font-thin tracking-wide text-center">
+        Contact Us
+      </div>
       <div>
         <form className="w-240 m-auto" ref={form} onSubmit={sendEmail}>
           <div className="grid grid-cols-2 gap-10">

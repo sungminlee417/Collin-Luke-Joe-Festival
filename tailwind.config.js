@@ -12,6 +12,12 @@ module.exports = {
         208: "52rem",
         224: "56rem",
         240: "60rem",
+        256: "64rem",
+        272: "68rem",
+        288: "72rem",
+        304: "76rem",
+        320: "80rem",
+        336: "84rem",
       },
       fontFamily: {
         playfair: ["Playfair Display", "serif"],
