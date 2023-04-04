@@ -3,11 +3,11 @@ import IndividualArtist from "./IndividualArtist";
 import natalieImage from "../images/natalie-peng.jpg";
 import matthewImage from "../images/matthew_payne.jpg";
 import bfc1 from "../images/bfc1.jpg";
-import bfc2 from "../images/bfc2.jpeg";
-import bfc3 from "../images/bfc3.jpeg";
-import bfc4 from "../images/bfc4.jpeg";
-import bfc5 from "../images/bfc5.jpeg";
-import bfc6 from "../images/bfc6.jpeg";
+import bfc2 from "../images/bfc2.jpg";
+import bfc3 from "../images/bfc3.jpg";
+import bfc4 from "../images/bfc4.jpg";
+import bfc5 from "../images/bfc5.jpg";
+import bfc6 from "../images/bfc6.jpg";
 
 interface Artist {
   id: number;
@@ -16,11 +16,11 @@ interface Artist {
   images?: string[];
 }
 
-interface Artists {
+interface ArtistInterface {
   [key: number]: Artist;
 }
 
-const lineup: Artists = {
+const lineup: ArtistInterface = {
   0: {
     id: 0,
     name: "The Muse Duo",
