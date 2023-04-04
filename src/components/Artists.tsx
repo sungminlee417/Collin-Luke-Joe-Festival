@@ -2,10 +2,10 @@ import { useState } from "react";
 import IndividualArtist from "./IndividualArtist";
 import natalieImage from "../images/natalie-peng.jpg";
 import matthewImage from "../images/matthew_payne.jpg";
-import bfc1 from "../images/bfc1.jpg";
+import bfc1 from "../images/bfc4.jpg";
 import bfc2 from "../images/bfc2.jpg";
 import bfc3 from "../images/bfc3.jpg";
-import bfc4 from "../images/bfc4.jpg";
+import bfc4 from "../images/bfc1.jpg";
 import bfc5 from "../images/bfc5.jpg";
 import bfc6 from "../images/bfc6.jpg";
 
