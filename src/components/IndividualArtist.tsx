@@ -70,7 +70,12 @@ const IndividualArtist = ({ artist }: IndividualArtistProps) => {
           {artist.images?.map((image) => {
             return (
               <SwiperSlide className="h-full">
-                <img src={image} className="h-full object-cover w-full" />
+                <img
+                  src={image}
+                  className={`${
+                    artist.id === 2 ? "object-top" : ""
+                  } h-full object-cover w-full`}
+                />
               </SwiperSlide>
             );
           })}
