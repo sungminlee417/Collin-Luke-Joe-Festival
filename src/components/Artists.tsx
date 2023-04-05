@@ -8,12 +8,18 @@ import bfc3 from "../images/bfc3.jpg";
 import bfc4 from "../images/bfc1.jpg";
 import bfc5 from "../images/bfc5.jpg";
 import bfc6 from "../images/bfc6.jpg";
+import muse1 from "../images/muse1.jpg";
+import muse2 from "../images/muse2.jpg";
+import muse3 from "../images/muse3.jpg";
+import muse4 from "../images/muse4.jpg";
+import muse5 from "../images/muse5.jpg";
+import muse6 from "../images/muse6.jpg";
 
 interface Artist {
   id: number;
   name: string;
   biography: JSX.Element | string;
-  images?: string[];
+  images: string[];
 }
 
 interface ArtistInterface {
@@ -53,6 +59,7 @@ const lineup: ArtistInterface = {
         Duo brings an exciting new perspective to chamber music.
       </>
     ),
+    images: [muse1, muse2, muse3, muse4, muse5, muse6],
   },
   1: {
     id: 1,
