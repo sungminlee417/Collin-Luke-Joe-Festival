@@ -11,7 +11,7 @@ const LandingPage = () => {
         <div className="absolute flex flex-col justify-center text-10xl text-[#353535] h-full font-playfair text-center opacity-1 z-1">
           <div className="opacity-100"> Long Lake</div>
           <div> Music Festival</div>
-          <div className="text-5xl text-white italic p-10 font-source">
+          <div className="text-4xl text-white italic p-10 font-source">
           <strong>"Off The Dock Chamber Festival</strong> aims to foster an
           invigorating concert-going experience by embracing the energy of new
           up-and-coming artists. With the promise of providing a gateway to

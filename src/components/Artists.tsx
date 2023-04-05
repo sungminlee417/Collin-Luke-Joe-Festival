@@ -206,7 +206,7 @@ const Artists = () => {
   const [currentArtist, setCurrentArtist] = useState<number>(0);
 
   return (
-    <section className="performances-section p-10">
+    <section className="performances-section m-10 p-10">
       <h3 className="text-5xl">Season Line Up</h3>
       <div className="py-20 flex justify-between items-center">
         <ul className="flex flex-col gap-12">
@@ -219,7 +219,7 @@ const Artists = () => {
                     setCurrentArtist(artist.id);
                   }}
                 >
-                  <span>{artist.name}</span>
+                  <span className="artist-name">{artist.name}</span>
                   <span className="underline"></span>
                 </button>
               </li>
