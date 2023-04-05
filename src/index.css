@@ -72,3 +72,10 @@ button {
 .artist-btn:hover .underline {
   width: 100%;
 }
+
+/* SWIPER STYLES */
+
+:root {
+  --swiper-navigation-color: #3c6e71;
+  --swiper-pagination-color: #3c6e71;
+}

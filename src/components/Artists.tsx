@@ -53,6 +53,7 @@ const lineup: ArtistInterface = {
           by Luke. These works are melodically focused and neo-classically
           inspired, while engaging audiences through it’s modernistic rhythmic
           drive. “Experiments” will be released April 8th, 2023.
+          {/*  */}
         </div>
         Through unique instrumentation, a convincing blend of musical
         personalities, and music which is experimental and accessible, the Muse
