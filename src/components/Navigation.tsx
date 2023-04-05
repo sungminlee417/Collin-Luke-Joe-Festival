@@ -26,7 +26,13 @@ const Navigation = () => {
         scroll ? "bg-white shadow-md" : "text-white"
       }`}
     >
-      <div>LONG LAKE MUSIC FESTIVAL</div>
+      <div>
+        <button
+          onClick={() => {
+            scrollSmoothlyTo("landingpage-section");
+          }}
+        >LONG LAKE MUSIC FESTIVAL</button>
+      </div>
       <div className="flex gap-10">
         <button className="text-[#3c6e71] hover:text-[#2c5153]">TICKETS</button>
         <button className="text-[#3c6e71] hover:text-[#2c5153]">DONATE</button>
