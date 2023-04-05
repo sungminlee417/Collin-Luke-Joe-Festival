@@ -3,9 +3,9 @@ import "./App.css";
 import Header from "./components/Navigation";
 import LandingPage from "./components/LandingPage";
 import Artists from "./components/Artists";
-import Contact from "./components/Contact/Contact";
+import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import Newsletter from "./components/Newsletter/Newsletter";
+import Newsletter from "./components/Newsletter";
 
 function App() {
   return (

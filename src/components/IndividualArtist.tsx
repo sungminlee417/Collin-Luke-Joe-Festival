@@ -72,6 +72,7 @@ const IndividualArtist = ({ artist }: IndividualArtistProps) => {
               <SwiperSlide className="h-full">
                 <img
                   src={image}
+                  alt={artist.name}
                   className={`${
                     artist.id === 2 ? "object-top" : ""
                   } h-full object-cover w-full`}

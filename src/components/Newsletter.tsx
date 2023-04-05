@@ -1,39 +1,41 @@
 // installed `npm i react-mailchimp-subscribe`
-import "./Newsletter.css";
-import React from "react";
 // import MailchimpSubscribe from "react-mailchimp-subscribe";
-import { useState, useEffect, onValidated } from "react";
+// import { useState } from "react";
+import backgroundImage from "../images/sample_band.jpg";
 
-const Newsletter = ({}) => {
-  const [email, setEmail] = useState("");
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const handleSubmit = (e) => {
-    //     e.preventDefault();
-    //     email &&
-    //     firstName &&
-    //     lastName &&
-    //     email.indexOf("@") > -1 &&
-    //     onValidated({
-    //         EMAIL: email,
-    //         MERGE1: firstName,
-    //         MERGE2: lastName,
-    //     });
-    // }
-    // useEffect(() => {
-    //     if(status === "success") clearFields();
-    // }, [status])
-    // const clearFields = () => {
-    //     setFirstName('');
-    //     setLastName('');
-    //     setEmail('');
-  };
+const Newsletter = () => {
+  // const [email, setEmail] = useState("");
+  // const [firstName, setFirstName] = useState("");
+  // const [lastName, setLastName] = useState("");
+  // const handleSubmit = (e: React.FormEvent) => {
+  //     e.preventDefault();
+  //     email &&
+  //     firstName &&
+  //     lastName &&
+  //     email.indexOf("@") > -1 &&
+  //     onValidated({
+  //         EMAIL: email,
+  //         MERGE1: firstName,
+  //         MERGE2: lastName,
+  //     });
+  // }
+  // useEffect(() => {
+  //     if(status === "success") clearFields();
+  // }, [status])
+  // const clearFields = () => {
+  //     setFirstName('');
+  //     setLastName('');
+  //     setEmail('');
+  // };
 
   return (
     <section className="newsletter-section">
-      <div className="newsletter-content">
-        <div className="newsletter-container">
-          <div className="newsletter-form">
+      <div
+        className="h-screen bg-cover w-screen relative"
+        style={{ backgroundImage: `url(${backgroundImage})` }}
+      >
+        <div className="text-white bg-[#284b63] p-24 bg-opacity-95 w-208 h-208 absolute top-32 left-32">
+          <div className="opacity-100 text-6xl font-playfair">
             Join Our Newsletter!
             <div className="mc__form-container">
               <form>

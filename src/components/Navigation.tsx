@@ -22,7 +22,7 @@ const Navigation = () => {
 
   return (
     <div
-      className={`flex fixed transition ease-in-out justify-between w-full z-10 px-28 py-14 font-bold text-2xl font-source ${
+      className={`flex fixed transition ease-in-out justify-between w-full z-10 lg:px-28 md:px-14 px-10 py-14 font-bold md:text-2xl text-xl font-source ${
         scroll ? "bg-white shadow-md" : "text-white"
       }`}
     >
