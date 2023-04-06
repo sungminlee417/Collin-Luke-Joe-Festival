@@ -60,7 +60,7 @@ button {
 
 
 /* ARTIST BIO LINK BUTTON */
-.artist-btn .underline {
+.artist-btn .underline{
   position: absolute;
   bottom: 0;
   left: 0;
@@ -72,6 +72,11 @@ button {
 
 .artist-btn:hover .underline {
   width: 100%;
+  background-color: #3C6E71;
+}
+
+.artist-btn:hover .artist-name {
+  color: #3C6E71;
 }
 
 /* SWIPER STYLES */
