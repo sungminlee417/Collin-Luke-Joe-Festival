@@ -22,27 +22,37 @@ const Navigation = () => {
 
   return (
     <div
-      className={`flex fixed transition ease-in-out justify-between w-full z-10 lg:px-28 md:px-14 px-10 py-14 font-bold md:text-2xl text-xl font-source ${
+      className={`flex fixed transition justify-between z-10 lg:px-28 md:px-14 px-10 md:py-14 py-10 font-bold md:text-2xl font-source w-full ${
         scroll ? "bg-white shadow-md" : "text-white"
       }`}
     >
-      <div>
+      <div className="align-middle">
         <button
           onClick={() => {
             scrollSmoothlyTo("landingpage-section");
           }}
-        >LONG LAKE MUSIC FESTIVAL</button>
+        >
+          <p className="md:block hidden">LONG LAKE MUSIC FESTIVAL</p>
+          <i className="fa-solid fa-house md:hidden block text-4xl"></i>
+        </button>
       </div>
       <div className="flex gap-10">
-        <button className="text-[#3c6e71] hover:text-[#2c5153]">TICKETS</button>
-        <button className="text-[#3c6e71] hover:text-[#2c5153]">DONATE</button>
+        <button className="text-[#3c6e71] hover:text-[#2c5153]">
+          <p className="md:block hidden">TICKETS</p>
+          <i className="fa-solid fa-ticket md:hidden block text-4xl"></i>
+        </button>
+        <button className="text-[#3c6e71] hover:text-[#2c5153]">
+          <p className="md:block hidden"> DONATE</p>
+          <i className="fa-solid fa-circle-dollar-to-slot md:hidden block text-4xl"></i>
+        </button>
         <button
           className="text-[#3c6e71] hover:text-[#2c5153]"
           onClick={() => {
             scrollSmoothlyTo("newsletter-section");
           }}
         >
-          SIGN UP FOR EMAILS
+          <p className="md:block hidden">SIGN UP FOR EMAILS</p>
+          <i className="fa-solid fa-right-to-bracket md:hidden block text-4xl"></i>
         </button>
         <button
           className="text-[#3c6e71] hover:text-[#2c5153]"
@@ -50,7 +60,8 @@ const Navigation = () => {
             scrollSmoothlyTo("contact-section");
           }}
         >
-          CONTACT
+          <p className="md:block hidden">CONTACT</p>
+          <i className="fa-solid fa-envelope md:hidden block text-4xl"></i>
         </button>
       </div>
     </div>

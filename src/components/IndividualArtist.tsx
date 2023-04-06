@@ -54,7 +54,7 @@ const IndividualArtist = ({ artist }: IndividualArtistProps) => {
 
   return (
     <div className="flex flex-col h-full divide-y">
-      <h4 className="text-4xl p-8">
+      <h4 className="md:text-4xl lg:block hidden p-8">
         <strong>{artist.name}</strong>
       </h4>
       <div className="flex grow overflow-hidden gap-10 rounded-bl-md">

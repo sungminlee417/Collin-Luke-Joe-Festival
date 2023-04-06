@@ -34,7 +34,7 @@ const Newsletter = () => {
         className="h-screen bg-cover w-screen relative"
         style={{ backgroundImage: `url(${backgroundImage})` }}
       >
-        <div className="text-white bg-[#284b63] p-24 bg-opacity-95 w-208 h-208 absolute top-32 left-32">
+        <div className="text-white bg-[#284b63] p-24 bg-opacity-95 md:w-208 w-56 h-208 absolute top-32 left-32">
           <div className="opacity-100 text-6xl font-playfair">
             Join Our Newsletter!
             <div className="mc__form-container">

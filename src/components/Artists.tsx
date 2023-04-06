@@ -226,7 +226,7 @@ const Artists = () => {
             );
           })}
         </ul>
-        <div className={"divide-y border rounded-md shadow-md w-336 h-208"}>
+        <div className="divide-y border rounded-md shadow-md lg:w-336 h-208 w-10">
           <IndividualArtist artist={lineup[currentArtist]} />
         </div>
       </div>

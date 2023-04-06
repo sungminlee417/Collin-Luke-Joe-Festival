@@ -24,7 +24,7 @@ export const Contact = () => {
             actions.setSubmitting(false);
           }}
         >
-          <Form className="w-240 m-auto flex flex-col gap-10 text-[#353535] text-2xl">
+          <Form className="md:w-240 w-10 m-auto flex flex-col gap-10 text-[#353535] text-2xl">
             <Field
               id="subject"
               name="subject"
