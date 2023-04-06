@@ -29,17 +29,16 @@ const Newsletter = () => {
   // };
 
   return (
-    <section className="newsletter-section">
-      <div
-        className="h-screen bg-cover w-screen relative"
-        style={{ backgroundImage: `url(${backgroundImage})` }}
-      >
-        <div className="text-white bg-[#284b63] p-24 bg-opacity-95 md:w-208 w-56 h-208 absolute top-32 left-32">
-          <div className="opacity-100 text-6xl font-playfair">
-            Join Our Newsletter!
-            <div className="mc__form-container">
-              <form>
-                {/* <h3 className="mc__title">
+    <section
+      className="newsletter-section h-screen lg:p-32 p-10"
+      style={{ backgroundImage: `url(${backgroundImage})` }}
+    >
+      <div className="text-white bg-[#284b63] lg:h-208 lg:w-208 h-full md:p-32 p-10 bg-opacity-95">
+        <div className="opacity-100 text-6xl font-playfair lg:text-start text-center">
+          Join Our Newsletter!
+          <div className="mc__form-container">
+            <form>
+              {/* <h3 className="mc__title">
                   {status === "success"
                     ? "Success!"
                     : "Join our email list for future updates."}
@@ -91,8 +90,7 @@ const Newsletter = () => {
                     />
                   </div>
                 ) : null} */}
-              </form>
-            </div>
+            </form>
           </div>
         </div>
       </div>

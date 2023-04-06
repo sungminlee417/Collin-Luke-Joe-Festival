@@ -9,8 +9,8 @@ export const Contact = () => {
   const initialValues: MyFormValues = { subject: "", message: "" };
 
   return (
-    <div className="contact-section flex flex-col m-20 gap-10">
-      <div className="text-8xl font-thin tracking-wide text-center">
+    <div className="contact-section flex flex-col md:m-20 m-12 md:gap-10 gap-16">
+      <div className="md:text-8xl text-7xl font-thin tracking-wide text-center">
         Contact Us
       </div>
       <div>
@@ -24,7 +24,7 @@ export const Contact = () => {
             actions.setSubmitting(false);
           }}
         >
-          <Form className="md:w-240 w-10 m-auto flex flex-col gap-10 text-[#353535] text-2xl">
+          <Form className="md:w-240 w-full m-auto flex flex-col gap-10 text-[#353535] text-2xl">
             <Field
               id="subject"
               name="subject"

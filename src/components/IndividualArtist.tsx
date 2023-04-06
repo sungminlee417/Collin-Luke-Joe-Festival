@@ -15,9 +15,10 @@ interface IndividualArtistProps {
     biography: JSX.Element | string;
     images?: string[];
   };
+  currentArtist: number;
 }
 
-const IndividualArtist = ({ artist }: IndividualArtistProps) => {
+const IndividualArtist = ({ artist, currentArtist }: IndividualArtistProps) => {
   const [hasOverflow, setHasOverflow] = useState<boolean>(true);
 
   const onBiographyScroll = (event: React.UIEvent<HTMLDivElement>) => {
@@ -53,11 +54,11 @@ const IndividualArtist = ({ artist }: IndividualArtistProps) => {
   );
 
   return (
-    <div className="flex flex-col h-full divide-y">
-      <h4 className="md:text-4xl lg:block hidden p-8">
+    <div className="flex flex-col h-full w-full divide-y">
+      <h4 className="md:text-4xl text-3xl md:p-8 p-6">
         <strong>{artist.name}</strong>
       </h4>
-      <div className="flex grow overflow-hidden gap-10 rounded-bl-md">
+      <div className="flex md:flex-row flex-col grow overflow-hidden md:gap-4 rounded-bl-md">
         <Swiper
           cssMode={true}
           navigation={true}
@@ -65,26 +66,24 @@ const IndividualArtist = ({ artist }: IndividualArtistProps) => {
           mousewheel={true}
           keyboard={true}
           modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-          className="mySwiper flex-1 justify-center"
+          className="mySwiper flex-1 justify-center w-full"
         >
           {artist.images?.map((image) => {
             return (
-              <SwiperSlide className="h-full">
+              <SwiperSlide className="h-full object-contain">
                 <img
                   src={image}
                   alt={artist.name}
-                  className={`${
-                    artist.id === 2 ? "object-top" : ""
-                  } h-full object-cover w-full`}
+                  className="h-full object-contain w-full"
                 />
               </SwiperSlide>
             );
           })}
         </Swiper>
-        <div className="flex-1 text-2xl p-8 overflow-hidden rounded-bl-md">
+        <div className="flex-1 text-2xl md:p-8 p-4 overflow-hidden rounded-bl-md">
           <div className="relative h-full">
             <div
-              className="overflow-scroll h-full flex flex-col gap-8"
+              className="overflow-y-scroll h-full flex flex-col gap-8"
               onLoad={onBiographyLoad}
               onScroll={onBiographyScroll}
             >

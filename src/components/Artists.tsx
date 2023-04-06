@@ -206,10 +206,10 @@ const Artists = () => {
   const [currentArtist, setCurrentArtist] = useState<number>(0);
 
   return (
-    <section className="performances-section m-10 p-10">
+    <section className="performances-section m-6">
       <h3 className="text-5xl">Season Line Up</h3>
-      <div className="py-20 flex justify-between items-center">
-        <ul className="flex flex-col gap-12">
+      <div className="py-20 flex items-center justify-evenly">
+        <ul className="flex-col gap-12 lg:flex hidden">
           {Object.values(lineup).map((artist) => {
             return (
               <li className="relative" key={artist.id}>
@@ -226,9 +226,23 @@ const Artists = () => {
             );
           })}
         </ul>
-        <div className="divide-y border rounded-md shadow-md lg:w-336 h-208 w-10">
-          <IndividualArtist artist={lineup[currentArtist]} />
-        </div>
+        <ul className="flex gap-10 flex-col lg:w-auto w-full">
+          {Object.values(lineup).map((artist) => {
+            return (
+              <li
+                className={`flex flex-col divide-y lg:w-336 md:h-208 h-240 w-full shadow-md rounded-md border ${
+                  artist.id === currentArtist ? "block" : "lg:hidden"
+                }`}
+                key={artist.id}
+              >
+                <IndividualArtist
+                  artist={artist}
+                  currentArtist={currentArtist}
+                />
+              </li>
+            );
+          })}
+        </ul>
       </div>
     </section>
   );
