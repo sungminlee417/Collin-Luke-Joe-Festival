@@ -9,7 +9,7 @@ const LandingPage = () => {
           src={backgroundImage}
         ></img>
         <div className="absolute flex flex-col justify-center lg:text-10xl text-[#353535] h-full font-playfair text-center md:text-9xl text-8xl">
-          <div>Long Lake</div>
+          <div>Off the Dock</div>
           <div> Music Festival</div>
           <div className="lg:text-5xl md:text-3xl text-2xl text-white italic p-10 font-source">
             <strong>"Off The Dock Chamber Festival</strong> aims to foster an
