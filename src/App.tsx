@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import Newsletter from "./components/Newsletter";
 import IndividualArtist from "./components/IndividualArtist";
 import ArtistNav from "./components/ArtistNav";
+import ConcertCalendar from "./components/ConcertCalendar";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
                 <>
                   <Navigation />
                   <LandingPage />
+                  <ConcertCalendar />
                   <Artists />
                   <Newsletter />
                   <Contact />
