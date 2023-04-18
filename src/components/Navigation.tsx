@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import horizontalLogo from "../images/horizontal-logo.png";
+import navLogo from "../images/nav-logo.png";
 
 const Navigation = () => {
   const [scroll, setScroll] = useState(false);
@@ -22,7 +24,7 @@ const Navigation = () => {
 
   return (
     <div
-      className={`flex fixed transition justify-between z-10 lg:px-28 md:px-14 px-10 md:py-14 py-10 font-bold md:text-2xl font-source w-full ${
+      className={`flex fixed transition justify-between z-10 lg:px-28 md:px-14 px-10 md:py-12 py-10 font-bold md:text-2xl font-source w-full ${
         scroll ? "bg-white shadow-md" : "text-white"
       }`}
     >
@@ -31,9 +33,11 @@ const Navigation = () => {
           onClick={() => {
             scrollSmoothlyTo("landingpage-section");
           }}
+          className="flex items-center"
         >
-          <p className="md:block hidden">LONG LAKE MUSIC FESTIVAL</p>
-          <i className="fa-solid fa-house md:hidden block text-4xl"></i>
+          {/* <p className="md:block hidden">LONG LAKE MUSIC FESTIVAL</p> */}
+          <img src={horizontalLogo} className="md:block hidden h-14" />
+          <img className="md:hidden block text-4xl h-14" src={navLogo} />
         </button>
       </div>
       <div className="flex gap-10">
