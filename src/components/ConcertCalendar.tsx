@@ -35,26 +35,24 @@ const events = [
     title: "Potluck",
     start: new Date("July 9, 2023 16:00:00"),
     end: new Date("July 9, 2023 19:00:00"),
+    url: "https://www.eventbrite.com/e/619836245897",
   },
   {
     title: "Duo Concert",
     start: new Date("July 9, 2023 19:00:00"),
+    url: "https://www.eventbrite.com/e/619833688247",
   },
 ];
 
 const ConcertCalendar = () => {
-  const handleDateClick = () => {};
-
   return (
-    <div className=" px-80 py-20">
+    <section className="concert-calendar-section px-80 py-20">
       <FullCalendar
         plugins={[dayGridPlugin, interactionPlugin]}
         initialView="dayGridMonth"
         events={events}
-        eventClick={(arg) => console.log(arg.event.title)}
-        // eventContent={renderEventContent}
       />
-    </div>
+    </section>
   );
 };
 

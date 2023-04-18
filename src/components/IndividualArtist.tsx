@@ -1,101 +1,37 @@
-import { useState } from "react";
-import classNames from "classnames";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { useParams } from "react-router";
+import { lineup } from "../artistData";
 
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-
-import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
-
-interface IndividualArtistProps {
-  artist: {
-    id: number;
-    name: string;
-    biography: JSX.Element | string;
-    images?: string[];
-  };
-  currentArtist: number;
-}
-
-const IndividualArtist = ({ artist, currentArtist }: IndividualArtistProps) => {
-  const [hasOverflow, setHasOverflow] = useState<boolean>(true);
-
-  const onBiographyScroll = (event: React.UIEvent<HTMLDivElement>) => {
-    const target = event.target as HTMLDivElement;
-    if (target.scrollTop > 100) {
-      setHasOverflow(false);
-    } else {
-      setHasOverflow(true);
-    }
-  };
-
-  const onBiographyLoad = (event: React.UIEvent<HTMLDivElement>) => {
-    const target = event.target as HTMLDivElement;
-    if (target.scrollHeight > target.clientHeight) {
-      setHasOverflow(true);
-    } else {
-      setHasOverflow(false);
-    }
-  };
-
-  const downArrowClasses = classNames(
-    "duration-200",
-    "transition-opacity",
-    "absolute",
-    "bottom-4",
-    "left-1/2",
-    "transform",
-    "-translate-x-1/2",
-    {
-      "opacity-0 pointer-events-none": !hasOverflow,
-      "opacity-100 pointer-events-auto": hasOverflow,
-    }
-  );
+const IndividualArtist = () => {
+  const { artistId } = useParams();
+  const artist = lineup[Number(artistId)];
 
   return (
-    <div className="flex flex-col h-full w-full divide-y">
-      <h4 className="md:text-4xl text-3xl md:p-8 p-6">
-        <strong>{artist.name}</strong>
-      </h4>
-      <div className="flex md:flex-row flex-col grow overflow-hidden md:gap-4 rounded-bl-md">
-        <Swiper
-          cssMode={true}
-          navigation={true}
-          pagination={true}
-          mousewheel={true}
-          keyboard={true}
-          modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-          className="mySwiper flex-1 justify-center w-full"
-        >
-          {artist.images?.map((image) => {
-            return (
-              <SwiperSlide className="h-full object-contain">
-                <img
-                  src={image}
-                  alt={artist.name}
-                  className="h-full object-contain w-full"
-                />
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
-        <div className="flex-1 text-2xl md:p-8 p-4 overflow-hidden rounded-bl-md">
-          <div className="relative h-full">
-            <div
-              className="overflow-y-scroll h-full flex flex-col gap-8"
-              onLoad={onBiographyLoad}
-              onScroll={onBiographyScroll}
+    <section className="flex md:flex-row flex-col gap-14 md:py-52 py-40 px-10">
+      <ul
+        className={`grid ${
+          artist.images.length < 2 ? "" : "grid-cols-2"
+        } md:w-128 gap-4`}
+      >
+        {artist.images.map((image) => {
+          return (
+            <li
+              className="h-full hover:scale-105 hover:opacity-80 transition"
+              key={image}
             >
-              {artist.biography}
-            </div>
-            <div className={downArrowClasses}>
-              <i className="fa-solid fa-arrow-down shadow-md w-16 h-16 flex justify-center items-center text-3xl bg-white rounded-full animate-bounce"></i>
-            </div>
-          </div>
-        </div>
+              <img
+                src={image}
+                className="h-full object-cover"
+                alt={artist.name}
+              />
+            </li>
+          );
+        })}
+      </ul>
+      <div className="flex flex-col gap-6 lg:w-336 md:w-224">
+        <h2 className="text-4xl font-bold">{artist.name}</h2>
+        <div className="flex flex-col gap-4 text-2xl">{artist.biography}</div>
       </div>
-    </div>
+    </section>
   );
 };
 

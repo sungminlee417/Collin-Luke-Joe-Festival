@@ -7,8 +7,9 @@ const LandingPage = () => {
         <img
           className="absolute h-full w-full object-cover"
           src={backgroundImage}
-        ></img>
-        <div className="absolute flex flex-col justify-center lg:text-10xl text-[#353535] h-full font-playfair text-center md:text-9xl text-8xl">
+          alt="landing page"
+        />
+        <div className="absolute flex flex-col justify-center lg:text-10xl text-[#353535] h-full font-playfair text-center md:text-9xl text-8xl p-4">
           <div> Off the Dock</div>
           <div>Chamber Festival</div>
           <div className="landing-desc lg:text-5xl md:text-3xl text-2xl text-white italic p-10 font-source">
