@@ -5,7 +5,7 @@ interface MyFormValues {
   message: string;
 }
 
-export const Contact = () => {
+const Contact = () => {
   const initialValues: MyFormValues = { subject: "", message: "" };
 
   return (

@@ -37,7 +37,10 @@ const Navigation = () => {
         >
           {/* <p className="md:block hidden">LONG LAKE MUSIC FESTIVAL</p> */}
           <img src={horizontalLogo} className="md:block hidden h-14" />
-          <img className="md:hidden block text-4xl h-14" src={navLogo} />
+          <img
+            className="md:hidden block text-4xl h-14 object-contain"
+            src={navLogo}
+          />
         </button>
       </div>
       <div className="flex gap-10">
@@ -46,7 +49,11 @@ const Navigation = () => {
           <i className="fa-solid fa-ticket md:hidden block text-4xl"></i>
         </button>
         <button className="text-[#3c6e71] hover:text-[#2c5153]">
-          <p className="md:block hidden"> DONATE</p>
+          <p className="md:block hidden">EVENT SCHEDULE</p>
+          <i className="fa-solid fa-calendar md:hidden block text-4xl"></i>
+        </button>
+        <button className="text-[#3c6e71] hover:text-[#2c5153]">
+          <p className="md:block hidden">DONATATIONS/SPONSORSHIPS</p>
           <i className="fa-solid fa-circle-dollar-to-slot md:hidden block text-4xl"></i>
         </button>
         <button
@@ -55,7 +62,7 @@ const Navigation = () => {
             scrollSmoothlyTo("newsletter-section");
           }}
         >
-          <p className="md:block hidden">SIGN UP FOR EMAILS</p>
+          <p className="md:block hidden">EMAIL SIGNUP</p>
           <i className="fa-solid fa-right-to-bracket md:hidden block text-4xl"></i>
         </button>
         <button
