@@ -1,7 +1,7 @@
 // installed `npm i react-mailchimp-subscribe`
 // import MailchimpSubscribe from "react-mailchimp-subscribe";
 // import { useState } from "react";
-import backgroundImage from "../images/sample_band.jpg";
+import backgroundImage from "../images/newsletter_photo.jpg";
 
 const Newsletter = () => {
   // const [email, setEmail] = useState("");
@@ -27,13 +27,15 @@ const Newsletter = () => {
   //     setLastName('');
   //     setEmail('');
   // };
-
   return (
     <section
-      className="newsletter-section h-screen lg:p-32 p-10"
-      style={{ backgroundImage: `url(${backgroundImage})` }}
+      className="newsletter-section h-screen "
     >
-      <div className="text-white bg-[#284b63] lg:h-208 lg:w-208 h-full md:p-32 p-10 bg-opacity-95">
+      <img
+        className="absolute h-full w-full object-cover z-0"
+        src={backgroundImage}
+      ></img>
+      <div className="absolute flex text-white bg-[#284b63] m-40 lg:h-208 lg:w-208 h-full p-20 bg-opacity-95">
         <div className="opacity-100 text-6xl font-playfair lg:text-start text-center">
           Join Our Newsletter!
           <div className="mc__form-container">
