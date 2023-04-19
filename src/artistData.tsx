@@ -1,5 +1,6 @@
 import natalieImage from "./images/natalie-peng.jpg";
 import matthewImage from "./images/matthew_payne.jpg";
+import katherineImage from "./images/katherine-krebs.jpeg";
 import bfc1 from "./images/bfc4.jpg";
 import bfc2 from "./images/bfc2.jpg";
 import bfc3 from "./images/bfc3.jpg";
@@ -187,5 +188,30 @@ export const lineup: ArtistInterface = {
       </>
     ),
     images: [matthewImage],
+  },
+  5: {
+    id: 5,
+    name: "Katherine Krebs",
+    biography: (
+      <>
+        <div>
+          Katherine Krebs recently received her master’s degree from
+          Northwestern studying under Stephen Smith. She is an alumnus of
+          Oberlin College and Conservatory where she received her bachelor's
+          degree in vocal performance and psychology. At Northwestern, Krebs was
+          a recipient of the Eckstein Scholarship and the Emily Boettcher and
+          Yule Bogue Endowed Award. Past credits include Selena in If I Were You
+          (Northwestern Opera Theater), Monica in The Medium (Northwestern Opera
+          Theater), Mustardseed in A Midsummer Night’s Dream (Chautauqua
+          Institution), Helena in A Midsummer Night’s Dream, Littler Daughter in
+          Proving Up, Soprano Trio Member in Trouble in Tahiti (Oberlin Opera
+          Theater), Johanna in Sweeney Todd, Eileen Sherwood in Wonderful Town
+          (College Light Opera Company), Bellina in Le astuzie femminili
+          (Oberlin in Italy), and Fredrika in A Little Night Music (Syracuse
+          Opera).
+        </div>
+      </>
+    ),
+    images: [katherineImage],
   },
 };

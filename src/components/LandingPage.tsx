@@ -3,12 +3,10 @@ import backgroundImage from "../images/sample_landing_page.jpg";
 const LandingPage = () => {
   return (
     <>
-      <div className="landingpage-section h-screen">
-        <img
-          className="absolute h-full w-full object-cover"
-          src={backgroundImage}
-          alt="landing page"
-        />
+      <div
+        className="landingpage-section h-screen bg-cover relative"
+        style={{ backgroundImage: `url(${backgroundImage})` }}
+      >
         <div className="absolute flex flex-col justify-center lg:text-10xl text-[#353535] h-full font-playfair text-center md:text-9xl text-8xl p-4">
           <div> Off the Dock</div>
           <div>Chamber Festival</div>

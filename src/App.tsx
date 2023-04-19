@@ -1,4 +1,3 @@
-import React from "react";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Navigation from "./components/Navigation";
@@ -9,39 +8,40 @@ import Footer from "./components/Footer";
 import Newsletter from "./components/Newsletter";
 import IndividualArtist from "./components/IndividualArtist";
 import ArtistNav from "./components/ArtistNav";
-import ConcertCalendar from "./components/ConcertCalendar";
+import ConcertDates from "./components/ConcertDates";
 
 function App() {
   return (
     <>
       <div className="App flex flex-col">
-        <div className="grow">
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <>
-                  <Navigation />
-                  <LandingPage />
-                  <ConcertCalendar />
-                  <Artists />
-                  <Newsletter />
-                  <Contact />
-                </>
-              }
-            />
-            <Route
-              path="/artists/:artistId"
-              element={
-                <>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Navigation />
+                <LandingPage />
+                <Artists />
+                <ConcertDates />
+                <Newsletter />
+                <Contact />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/artists/:artistId"
+            element={
+              <div className="flex flex-col h-screen">
+                <div className="grow">
                   <ArtistNav />
                   <IndividualArtist />
-                </>
-              }
-            />
-          </Routes>
-        </div>
-        <Footer />
+                </div>
+                <Footer />
+              </div>
+            }
+          />
+        </Routes>
       </div>
     </>
   );
