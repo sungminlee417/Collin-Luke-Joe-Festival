@@ -7,7 +7,7 @@ const ConcertDates = () => {
         {events.map((event) => {
           return (
             <li className="rounded-md shadow-md p-10 hover:shadow-lg transition flex md:flex-row flex-col gap-14 justify-between border-gray-100 border">
-              <div className="flex flex-col md:flex-row gap-10">
+              <div className="flex flex-col md:flex-row gap-14">
                 <div>
                   <div className="text-4xl font-bold">{event.date.day}</div>
                   <div className="text-4xl font-bold">{event.date.month}</div>
@@ -21,11 +21,14 @@ const ConcertDates = () => {
                 </div>
               </div>
               <div className="flex flex-col gap-4 justify-center">
-                <button className="px-8 py-4 text-2xl font-bold bg-orange-500 rounded-md text-white hover:shadow-md transition">
-                  <a href={event.url} rel="noopener noreferrer" target="_blank">
-                    Tickets
-                  </a>
-                </button>
+                <a
+                  className="px-8 py-4 text-2xl font-bold bg-orange-500 rounded-md text-white hover:shadow-md transition"
+                  href={event.url}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Tickets
+                </a>
                 {/* <button className="px-8 py-4 text-2xl font-bold bg-[#3c6e71] hover:bg-[#2c5153] transition text-white rounded-md">
                   More Info
                 </button> */}

@@ -6,21 +6,21 @@ const IndividualArtist = () => {
   const artist = lineup[Number(artistId)];
 
   return (
-    <section className="flex md:flex-row flex-col gap-14 md:py-52 py-40 px-10">
+    <section className="flex md:flex-row flex-col gap-14 py-52 px-10">
       <ul
         className={`grid ${
-          artist.images.length < 2 ? "" : "grid-cols-2"
+          artist.images.length < 2 ? "" : "grid-cols-2 h-208 overflow-hidden"
         } md:w-128 gap-4`}
       >
         {artist.images.map((image) => {
           return (
             <li
-              className="h-full hover:scale-105 hover:opacity-80 transition"
+              className="h-full hover:opacity-80 transition overflow-hidden"
               key={image}
             >
               <img
                 src={image}
-                className="h-full object-cover"
+                className="h-full w-full hover:scale-105 object-cover transition"
                 alt={artist.name}
               />
             </li>
