@@ -10,7 +10,7 @@ import ConcertDates from "./components/ConcertDates";
 function App() {
   return (
     <>
-      <div className="App flex flex-col">
+      <div className="flex flex-col" id="App">
         <Navigation />
         <LandingPage />
         <Artists />
