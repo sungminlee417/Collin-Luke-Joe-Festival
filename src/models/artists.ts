@@ -8,3 +8,7 @@ export interface Artist {
 export interface ArtistInterface {
   [key: number]: Artist;
 }
+
+export interface IndividualArtistProps {
+  artist: Artist;
+}

@@ -1,4 +1,4 @@
-import { events } from "../eventData";
+import { events } from "../data/eventData";
 
 const ConcertDates = () => {
   return (
@@ -6,7 +6,10 @@ const ConcertDates = () => {
       <ul className="flex flex-col gap-14">
         {events.map((event) => {
           return (
-            <li className="rounded-md shadow-md p-10 hover:shadow-lg transition flex md:flex-row flex-col gap-14 justify-between border-gray-100 border">
+            <li
+              className="rounded-md shadow-md p-10 hover:shadow-lg transition flex md:flex-row flex-col gap-14 justify-between border-gray-100 border"
+              key={event.title}
+            >
               <div className="flex flex-col md:flex-row gap-14">
                 <div>
                   <div className="text-4xl font-bold">{event.date.day}</div>

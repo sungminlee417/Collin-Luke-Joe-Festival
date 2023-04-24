@@ -1,37 +1,32 @@
-import { useParams } from "react-router";
-import { lineup } from "../artistData";
+import { useState } from "react";
+import IndividualArtistModal from "./IndividualArtistModal";
+import { IndividualArtistProps } from "../models/artists";
+import { Modal } from "../context/Modal";
 
-const IndividualArtist = () => {
-  const { artistId } = useParams();
-  const artist = lineup[Number(artistId)];
+const IndividualArtist = ({ artist }: IndividualArtistProps) => {
+  const [showModal, setShowModal] = useState(false);
 
   return (
-    <section className="flex md:flex-row flex-col gap-14 py-52 px-10">
-      <ul
-        className={`grid ${
-          artist.images.length < 2 ? "" : "grid-cols-2 h-208 overflow-hidden"
-        } md:w-128 gap-4`}
+    <>
+      <button
+        className="h-full w-full bg-black rounded-md relative"
+        onClick={() => setShowModal(true)}
       >
-        {artist.images.map((image) => {
-          return (
-            <li
-              className="h-full hover:opacity-80 transition overflow-hidden"
-              key={image}
-            >
-              <img
-                src={image}
-                className="h-full w-full hover:scale-105 object-cover transition"
-                alt={artist.name}
-              />
-            </li>
-          );
-        })}
-      </ul>
-      <div className="flex flex-col gap-6 lg:w-336 md:w-224">
-        <h2 className="text-4xl font-bold">{artist.name}</h2>
-        <div className="flex flex-col gap-4 text-2xl">{artist.biography}</div>
-      </div>
-    </section>
+        <img
+          src={artist.images[0]}
+          className="h-full w-full object-cover rounded-md hover:opacity-60 transition peer"
+          alt={artist.name}
+        />
+        <div className="absolute lg:text-5xl text-3xl top-1/2 left-1/2 -translate-x-1/2 w-96 text-center text-white peer-hover:-translate-y-1/2 peer-hover:opacity-100 translate-y-20 transition opacity-0 duration-300 pointer-events-none">
+          {artist.name}
+        </div>
+      </button>
+      {showModal && (
+        <Modal onClose={() => setShowModal(false)}>
+          <IndividualArtistModal artist={artist} />
+        </Modal>
+      )}
+    </>
   );
 };
 

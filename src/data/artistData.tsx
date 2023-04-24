@@ -1,19 +1,19 @@
-import natalieImage from "./images/natalie-peng.jpg";
-import matthewImage from "./images/matthew_payne.jpg";
-import katherineImage from "./images/katherine-krebs.jpeg";
-import bfc1 from "./images/bfc4.jpg";
-import bfc2 from "./images/bfc2.jpg";
-import bfc3 from "./images/bfc3.jpg";
-import bfc4 from "./images/bfc1.jpg";
-import bfc5 from "./images/bfc5.jpg";
-import bfc6 from "./images/bfc6.jpg";
-import muse1 from "./images/muse1.jpg";
-import muse2 from "./images/muse2.jpg";
-import muse3 from "./images/muse3.jpg";
-import muse4 from "./images/muse4.jpg";
-import muse5 from "./images/muse5.jpg";
-import muse6 from "./images/muse6.jpg";
-import { ArtistInterface } from "./models/artists";
+import natalieImage from "../images/natalie-peng.jpg";
+import matthewImage from "../images/matthew_payne.jpg";
+import katherineImage from "../images/katherine-krebs.jpeg";
+import bfc1 from "../images/bfc4.jpg";
+import bfc2 from "../images/bfc2.jpg";
+import bfc3 from "../images/bfc3.jpg";
+import bfc4 from "../images/bfc1.jpg";
+import bfc5 from "../images/bfc5.jpg";
+import bfc6 from "../images/bfc6.jpg";
+import muse1 from "../images/muse1.jpg";
+import muse2 from "../images/muse2.jpg";
+import muse3 from "../images/muse3.jpg";
+import muse4 from "../images/muse4.jpg";
+import muse5 from "../images/muse5.jpg";
+import muse6 from "../images/muse6.jpg";
+import { ArtistInterface } from "../models/artists";
 
 export const lineup: ArtistInterface = {
   1: {

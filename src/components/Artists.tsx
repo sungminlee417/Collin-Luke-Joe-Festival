@@ -1,9 +1,9 @@
-import { lineup } from "../artistData";
+import { lineup } from "../data/artistData";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Autoplay, Navigation } from "swiper";
-import { NavLink } from "react-router-dom";
+import IndividualArtist from "./IndividualArtist";
 
 const Artists = () => {
   const lineupArr = Object.values(lineup);
@@ -38,18 +38,7 @@ const Artists = () => {
         {lineupArr.map((artist) => {
           return (
             <SwiperSlide key={artist.id}>
-              <NavLink to={`/artists/${artist.id}`}>
-                <div className="h-full w-full bg-black rounded-md relative">
-                  <img
-                    src={artist.images[0]}
-                    className="h-full w-full object-cover rounded-md hover:opacity-60 transition peer"
-                    alt={artist.name}
-                  />
-                  <div className="absolute lg:text-5xl text-3xl top-1/2 left-1/2 -translate-x-1/2 w-96 text-center text-white peer-hover:-translate-y-1/2 peer-hover:opacity-100 translate-y-20 transition opacity-0 duration-300 pointer-events-none">
-                    {artist.name}
-                  </div>
-                </div>
-              </NavLink>
+              <IndividualArtist artist={artist} />
             </SwiperSlide>
           );
         })}
