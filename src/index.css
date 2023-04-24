@@ -1,21 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import url("https://fonts.googleapis.com/css2?family=Hind&family=Montserrat:wght@800&family=PT+Sans+Caption&family=Yeseva+One&display=swap" rel="stylesheet")
 /*
 --- 01 COLORS
 - White: #FFFFFF
-- Jet (dark grey): #353535
-- Ming (emerald blue): #3C6E71
-- Gainsboro (light grey): #D9D9D9
-- Indigo Dye: #284B63
+- Darkest blue: #1A374D
+- Second darkest blue: #406882
+- Second lightest blue: #6998AB
+- Lightest blue: #B1D0E0
 */
 
 /*
 --- 02 FONTS
 - Header:
-  font-family: 'Playfair Display', serif;
-  font-style: italic;
+  font-family: 'Oswald', sans-serif;
+
 - Body:
   font-family: 'Source Sans Pro', sans-serif;
 */
@@ -81,8 +81,12 @@ button {
 
 .landing-desc {
   text-shadow: 1px 1px 1px black;
+  margin-top: 175px;
 }
 
+.title {
+  margin-top: 50px;
+}
 /* SWIPER STYLES */
 
 :root {

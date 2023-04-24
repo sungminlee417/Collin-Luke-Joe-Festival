@@ -32,7 +32,7 @@ const Newsletter = () => {
       className="newsletter-section h-screen bg-cover"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
-      <div className="h-full flex text-white bg-[#284b63] md:m-28 md:absolute md:h-208 lg:h-208 lg:w-208 justify-center md:p-20 p-12 md:bg-opacity-95 bg-opacity-60">
+      <div className="h-full flex text-white bg-[#B1D0E0] md:m-28 md:absolute md:h-208 lg:h-208 lg:w-208 justify-center md:p-20 p-12 md:bg-opacity-95 bg-opacity-60">
         <div className="opacity-100 text-6xl font-playfair lg:text-start text-center">
           Join Our Newsletter!
           <div className="mc__form-container">

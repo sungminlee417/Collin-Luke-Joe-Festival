@@ -54,7 +54,7 @@ const Navigation = () => {
       </div>
       <div className="flex lg:gap-10 md:gap-14 gap-10">
         <button
-          className="text-[#3c6e71] hover:text-[#2c5153]"
+          className="text-[#406882] hover:text-[#2c5153]"
           onClick={() => {
             scrollSmoothlyTo("concert-calendar-section");
           }}
@@ -62,12 +62,12 @@ const Navigation = () => {
           <p className="lg:block hidden">EVENT SCHEDULE</p>
           <i className="fa-solid fa-calendar lg:hidden block text-4xl"></i>
         </button>
-        <button className="text-[#3c6e71] hover:text-[#2c5153]">
-          <p className="lg:block hidden">DONATATIONS/SPONSORSHIPS</p>
+        <button className="text-[#406882] hover:text-[#2c5153]">
+          <p className="lg:block hidden">DONATIONS/SPONSORSHIPS</p>
           <i className="fa-solid fa-circle-dollar-to-slot lg:hidden block text-4xl"></i>
         </button>
         <button
-          className="text-[#3c6e71] hover:text-[#2c5153]"
+          className="text-[#406882] hover:text-[#2c5153]"
           onClick={() => {
             scrollSmoothlyTo("newsletter-section");
           }}
@@ -76,7 +76,7 @@ const Navigation = () => {
           <i className="fa-solid fa-right-to-bracket lg:hidden block text-4xl"></i>
         </button>
         <button
-          className="text-[#3c6e71] hover:text-[#2c5153]"
+          className="text-[#406882] hover:text-[#2c5153]"
           onClick={() => {
             scrollSmoothlyTo("contact-section");
           }}
