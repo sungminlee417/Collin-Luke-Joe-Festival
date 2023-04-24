@@ -4,7 +4,7 @@ import LandingPage from "./components/LandingPage";
 import Artists from "./components/Artists";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import Newsletter from "./components/Newsletter";
+// import Newsletter from "./components/Newsletter";
 import ConcertDates from "./components/ConcertDates";
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
         <LandingPage />
         <Artists />
         <ConcertDates />
-        <Newsletter />
+        {/* <Newsletter /> */}
         <Contact />
         <Footer />
       </div>

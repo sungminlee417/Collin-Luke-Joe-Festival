@@ -2,7 +2,8 @@ import { events } from "../data/eventData";
 
 const ConcertDates = () => {
   return (
-    <section className="concert-calendar-section h-auto lg:px-14 md:px-8 py-8 px-4">
+    <section className="concert-calendar-section h-auto p-14 gap-14 flex flex-col mx-2 md:mx-4 lg:mx-6 md:my-24 my-20">
+      <h3 className="text-2xl font-bold">CONCERT SCHEDULE</h3>
       <ul className="flex flex-col gap-14">
         {events.map((event) => {
           return (
@@ -17,9 +18,15 @@ const ConcertDates = () => {
                 </div>
                 <div className="flex flex-col gap-6">
                   <div className="text-5xl font-bold">{event.title}</div>
-                  <div className="flex items-center gap-2">
-                    <i className="fa-solid fa-clock"></i>
-                    <div className="font-bold text-lg">{event.time}</div>
+                  <div className="flex gap-6">
+                    <div className="flex items-center gap-2">
+                      <i className="fa-solid fa-clock"></i>
+                      <div className="font-bold text-lg">{event.time}</div>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <i className="fa-solid fa-location-dot"></i>
+                      <div className="font-bold text-lg">{event.location}</div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -32,9 +39,6 @@ const ConcertDates = () => {
                 >
                   Tickets
                 </a>
-                {/* <button className="px-8 py-4 text-2xl font-bold bg-[#3c6e71] hover:bg-[#2c5153] transition text-white rounded-md">
-                  More Info
-                </button> */}
               </div>
             </li>
           );

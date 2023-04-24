@@ -11,4 +11,5 @@ export interface ArtistInterface {
 
 export interface IndividualArtistProps {
   artist: Artist;
+  onClose?: () => void;
 }

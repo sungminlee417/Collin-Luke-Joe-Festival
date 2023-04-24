@@ -1,8 +1,8 @@
 import { IndividualArtistProps } from "../models/artists";
 
-const IndividualArtistModal = ({ artist }: IndividualArtistProps) => {
+const IndividualArtistModal = ({ artist, onClose }: IndividualArtistProps) => {
   return (
-    <section className="flex md:flex-row flex-col bg-white p-10 gap-10 md:h-208 h-240 lg:w-336 md:w-272 m-10 rounded-md overflow-auto">
+    <section className="flex md:flex-row flex-col bg-white p-10 gap-10 md:h-208 h-240 lg:w-336 md:w-272 md:m-0 m-10 rounded-md overflow-auto">
       <ul
         className={` basis-1/3 grid ${
           artist.images.length < 2 ? "" : "grid-cols-2"
@@ -29,6 +29,9 @@ const IndividualArtistModal = ({ artist }: IndividualArtistProps) => {
           {artist.biography}
         </div>
       </div>
+      <button onClick={onClose} className="absolute top-10 right-10">
+        <i className="fa-solid fa-xmark text-white text-5xl" />
+      </button>
     </section>
   );
 };

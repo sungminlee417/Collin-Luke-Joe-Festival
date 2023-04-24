@@ -56,24 +56,24 @@ const Navigation = () => {
         <button
           className="text-[#406882] hover:text-[#2c5153]"
           onClick={() => {
+            scrollSmoothlyTo("performers-section");
+          }}
+        >
+          <p className="lg:block hidden">SEASON LINEUP</p>
+          <i className="fa-solid fa-music lg:hidden block text-4xl"></i>
+        </button>
+        <button
+          className="text-[#406882] hover:text-[#2c5153]"
+          onClick={() => {
             scrollSmoothlyTo("concert-calendar-section");
           }}
         >
-          <p className="lg:block hidden">EVENT SCHEDULE</p>
+          <p className="lg:block hidden">CONCERT SCHEDULE</p>
           <i className="fa-solid fa-calendar lg:hidden block text-4xl"></i>
         </button>
         <button className="text-[#406882] hover:text-[#2c5153]">
           <p className="lg:block hidden">DONATIONS/SPONSORSHIPS</p>
           <i className="fa-solid fa-circle-dollar-to-slot lg:hidden block text-4xl"></i>
-        </button>
-        <button
-          className="text-[#406882] hover:text-[#2c5153]"
-          onClick={() => {
-            scrollSmoothlyTo("newsletter-section");
-          }}
-        >
-          <p className="lg:block hidden">EMAIL SIGNUP</p>
-          <i className="fa-solid fa-right-to-bracket lg:hidden block text-4xl"></i>
         </button>
         <button
           className="text-[#406882] hover:text-[#2c5153]"

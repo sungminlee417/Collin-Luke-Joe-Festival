@@ -23,7 +23,10 @@ const IndividualArtist = ({ artist }: IndividualArtistProps) => {
       </button>
       {showModal && (
         <Modal onClose={() => setShowModal(false)}>
-          <IndividualArtistModal artist={artist} />
+          <IndividualArtistModal
+            artist={artist}
+            onClose={() => setShowModal(false)}
+          />
         </Modal>
       )}
     </>

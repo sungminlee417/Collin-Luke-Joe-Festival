@@ -18,7 +18,7 @@ const Contact = () => {
           initialValues={initialValues}
           onSubmit={(values, actions) => {
             const { subject, message } = values;
-            window.location.href = `mailto:${"themuseduo@gmail.com"}?subject=${
+            window.location.href = `mailto:${"offthedockchamber@gmail.com"}?subject=${
               subject || ""
             }&body=${message || ""}`;
             actions.setSubmitting(false);

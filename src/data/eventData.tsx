@@ -6,6 +6,8 @@ export const events = [
       month: "July",
     },
     time: "8:00pm-9:30pm",
+    location:
+      "First Presbyterian Church of Skaneateles 97 East Genesee Street Skaneateles, NY 13152",
     url: "https://www.eventbrite.com/e/619799867087",
   },
   {
@@ -15,6 +17,8 @@ export const events = [
       month: "July",
     },
     time: "1:00pm-2:30pm",
+    location:
+      "Skaneateles Library 49 East Genesee Street Skaneateles, NY 13152",
     url: "https://www.eventbrite.com/e/619826988207",
   },
   {
@@ -24,6 +28,8 @@ export const events = [
       month: "July",
     },
     time: "8:00pm",
+    location:
+      "First Presbyterian Church of Skaneateles 97 East Genesee Street Skaneateles, NY 13152",
     url: "https://www.eventbrite.com/e/619829405437",
   },
   {
@@ -33,6 +39,8 @@ export const events = [
       month: "July",
     },
     time: "1:00pm-2:30pm",
+    location:
+      "Skaneateles Library 49 East Genesee Street Skaneateles, NY 13152",
     url: "https://www.eventbrite.com/e/619830759487",
   },
   {
@@ -42,6 +50,8 @@ export const events = [
       month: "July",
     },
     time: "8:00pm",
+    location:
+      "First Presbyterian Church of Skaneateles 97 East Genesee Street Skaneateles, NY 13152",
     url: "https://www.eventbrite.com/e/619832053357",
   },
   {
@@ -51,6 +61,8 @@ export const events = [
       month: "July",
     },
     time: "4:00pm-7:00pm",
+    location:
+      "First Presbyterian Church of Skaneateles: Dining Hall 97 East Genesee Street Skaneateles, NY 13152",
     url: "https://www.eventbrite.com/e/619836245897",
   },
   {
@@ -60,6 +72,8 @@ export const events = [
       month: "July",
     },
     time: "7:00pm",
+    location:
+      "First Presbyterian Church of Skaneateles 97 East Genesee Street Skaneateles, NY 13152",
     url: "https://www.eventbrite.com/e/619833688247",
   },
 ];

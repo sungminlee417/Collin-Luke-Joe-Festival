@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("https://fonts.googleapis.com/css2?family=Hind&family=Montserrat:wght@800&family=PT+Sans+Caption&family=Yeseva+One&display=swap" rel="stylesheet")
 /*
 --- 01 COLORS
 - White: #FFFFFF
@@ -58,9 +57,8 @@ button {
   position: relative;
 }
 
-
 /* ARTIST BIO LINK BUTTON */
-.artist-btn .underline{
+.artist-btn .underline {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -72,11 +70,11 @@ button {
 
 .artist-btn:hover .underline {
   width: 100%;
-  background-color: #3C6E71;
+  background-color: #3c6e71;
 }
 
 .artist-btn:hover .artist-name {
-  color: #3C6E71;
+  color: #3c6e71;
 }
 
 .landing-desc {

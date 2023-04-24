@@ -42,7 +42,7 @@ export function Modal({ children, onClose }: ModalProviderProps) {
         className="absolute h-screen w-screen bg-[rgba(0,0,0,0.85)]"
         onClick={onClose}
       />
-      <div className="h-fit w-fit z-10">{children}</div>
+      <div className="z-10">{children}</div>
     </div>,
     modalNode
   );
