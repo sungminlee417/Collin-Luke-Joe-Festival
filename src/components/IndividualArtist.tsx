@@ -2,6 +2,7 @@ import { useState } from "react";
 import IndividualArtistModal from "./IndividualArtistModal";
 import { IndividualArtistProps } from "../models/artists";
 import { Modal } from "../context/Modal";
+import { AnimatePresence } from "framer-motion";
 
 const IndividualArtist = ({ artist }: IndividualArtistProps) => {
   const [showModal, setShowModal] = useState(false);
@@ -21,14 +22,16 @@ const IndividualArtist = ({ artist }: IndividualArtistProps) => {
           {artist.name}
         </div>
       </button>
-      {showModal && (
-        <Modal onClose={() => setShowModal(false)}>
-          <IndividualArtistModal
-            artist={artist}
-            onClose={() => setShowModal(false)}
-          />
-        </Modal>
-      )}
+      <AnimatePresence>
+        {showModal && (
+          <Modal onClose={() => setShowModal(false)}>
+            <IndividualArtistModal
+              artist={artist}
+              onClose={() => setShowModal(false)}
+            />
+          </Modal>
+        )}
+      </AnimatePresence>
     </>
   );
 };

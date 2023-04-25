@@ -1,5 +1,6 @@
 import React, { useContext, useRef, useState, useEffect } from "react";
 import ReactDOM from "react-dom";
+import { motion } from "framer-motion";
 
 type ModalProviderProps = {
   children: React.ReactNode;
@@ -38,9 +39,12 @@ export function Modal({ children, onClose }: ModalProviderProps) {
 
   return ReactDOM.createPortal(
     <div className="fixed top-0 right-0 left-0 bottom-0 flex justify-center items-center z-30 h-screen w-screen">
-      <div
+      <motion.div
         className="absolute h-screen w-screen bg-[rgba(0,0,0,0.85)]"
         onClick={onClose}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
       />
       <div className="z-10">{children}</div>
     </div>,

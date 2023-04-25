@@ -5,6 +5,12 @@ export interface Artist {
   images: string[];
 }
 
+export interface Image {
+  image: string;
+  artist: Artist;
+  onClose?: () => void;
+}
+
 export interface ArtistInterface {
   [key: number]: Artist;
 }

@@ -1,4 +1,5 @@
 import { events } from "../data/eventData";
+import { motion } from "framer-motion";
 
 const ConcertDates = () => {
   return (
@@ -7,9 +8,15 @@ const ConcertDates = () => {
       <ul className="flex flex-col gap-14">
         {events.map((event) => {
           return (
-            <li
+            <motion.li
               className="rounded-md shadow-md p-10 hover:shadow-lg transition flex md:flex-row flex-col gap-14 justify-between border-gray-100 border"
               key={event.title}
+              initial={{ y: 100 }}
+              whileInView={{
+                y: 0,
+                transition: { type: "spring", bounce: 0.4, duration: 0.8 },
+              }}
+              viewport={{ once: true, amount: 0.8 }}
             >
               <div className="flex flex-col md:flex-row gap-14">
                 <div>
@@ -40,7 +47,7 @@ const ConcertDates = () => {
                   Tickets
                 </a>
               </div>
-            </li>
+            </motion.li>
           );
         })}
       </ul>
