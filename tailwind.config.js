@@ -22,6 +22,7 @@ module.exports = {
       fontFamily: {
         playfair: ["Playfair Display", "serif"],
         source: ["Source Sans Pro", "sans-serif"],
+        merriweather: ["Merriweather Sans", "sans-serif"],
       },
       fontSize: {
         "10xl": "140px",
