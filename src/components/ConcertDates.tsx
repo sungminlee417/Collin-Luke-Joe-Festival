@@ -39,7 +39,7 @@ const ConcertDates = () => {
               </div>
               <div className="flex flex-col gap-4 justify-center">
                 <a
-                  className="px-8 py-4 text-2xl font-bold bg-orange-500 rounded-md text-white hover:shadow-md transition"
+                  className="px-8 py-4 text-2xl font-bold bg-[#E8DFCA] rounded-md text-white hover:shadow-md transition"
                   href={event.url}
                   rel="noopener noreferrer"
                   target="_blank"
