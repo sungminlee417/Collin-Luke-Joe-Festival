@@ -9,18 +9,22 @@ const ArtistImageModal = React.memo(
     }, [onClose]);
 
     return (
-      <div>
+      <div className="fixed top-0 left-0 w-full h-full flex flex-col items-center justify-center z-50">
+        <button
+          onClick={handleClose}
+          className="absolute top-4 right-4 text-gray-400 hover:text-white focus:outline-none"
+        >
+          <span className="sr-only">Close modal</span>
+          <i className="fas fa-times text-2xl"></i>
+        </button>
         <motion.img
-          className="h-screen object-contain"
+          className="max-w-full max-h-screen object-contain"
           src={image}
           alt={artist.name}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
         />
-        <button onClick={handleClose} className="absolute top-10 right-10">
-          <i className="fa-solid fa-xmark text-white text-5xl" />
-        </button>
       </div>
     );
   }

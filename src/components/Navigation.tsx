@@ -1,107 +1,88 @@
 import { useState, useEffect } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
 import horizontalLogo from "../images/horizontal-logo.png";
 import navLogo from "../images/nav-logo.png";
-import { NavLink, useNavigate } from "react-router-dom";
 
-const Navigation = () => {
+function Navigation() {
   const [scroll, setScroll] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
     function handleScroll() {
-      if (window.scrollY > 50) {
-        setScroll(true);
-      } else {
-        setScroll(false);
-      }
+      setScroll(window.scrollY > 50);
     }
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  function scrollSmoothlyTo(className: string): void {
+  function scrollTo(className: string): void {
     navigate("/");
     setTimeout(() => {
-      const element = document.querySelector<HTMLElement>(`.${className}`)!;
+      const element = document.querySelector(`.${className}`)!;
       const offset = document.querySelector(".navigation")?.clientHeight || 0;
-
       const topOffset =
         element.getBoundingClientRect().top + window.pageYOffset - offset;
-      window.scrollTo({
-        behavior: "smooth",
-        top: topOffset,
-      });
+      window.scrollTo({ behavior: "smooth", top: topOffset });
     }, 50);
   }
 
   return (
-    <div
-      className={`navigation flex fixed transition justify-between z-10 lg:px-28 md:px-14 px-10 py-8 font-bold md:text-2xl font-source w-full ${
+    <nav
+      className={`navigation fixed flex justify-between w-full py-8 px-10 md:px-14 lg:px-28 font-bold md:text-2xl font-source transition z-10 ${
         scroll ? "bg-white shadow-md text-[#7895B2]" : "text-[#AEBDCA]"
       }`}
     >
       <div className="align-middle">
         <button
-          onClick={() => {
-            scrollSmoothlyTo("landingpage-section");
-          }}
           className="flex items-center"
+          onClick={() => scrollTo("landingpage-section")}
         >
           <img
             src={horizontalLogo}
-            className="lg:block hidden h-14 object-contain"
-            alt="logo"
+            alt="Logo"
+            className="h-14 lg:block hidden object-contain"
           />
           <img
-            className="lg:hidden block text-4xl h-14 object-contain"
             src={navLogo}
-            alt="logo"
+            alt="Logo"
+            className="block h-14 lg:hidden object-contain text-4xl"
           />
         </button>
       </div>
-      <div className="flex lg:gap-10 md:gap-14 gap-10">
-        <NavLink
-          to="/about"
-          className="m-auto"
-        >
-          <p className="lg:block hidden">ABOUT</p>
-          <i className="fa-solid fa-circle-info lg:hidden block text-4xl"></i>
-        </NavLink>
-        <button className="">
-          <p className="lg:block hidden">DONATIONS/SPONSORSHIPS</p>
-          <i className="fa-solid fa-circle-dollar-to-slot lg:hidden block text-4xl"></i>
-        </button>
-        <button
-          className=""
-          onClick={() => {
-            scrollSmoothlyTo("performers-section");
-          }}
-        >
-          <p className="lg:block hidden">SEASON LINEUP</p>
-          <i className="fa-solid fa-music lg:hidden block text-4xl"></i>
-        </button>
-        <button
-          className=""
-          onClick={() => {
-            scrollSmoothlyTo("concert-calendar-section");
-          }}
-        >
-          <p className="lg:block hidden">CONCERT SCHEDULE</p>
-          <i className="fa-solid fa-calendar lg:hidden block text-4xl"></i>
-        </button>
-
-        <button
-          className=""
-          onClick={() => {
-            scrollSmoothlyTo("contact-section");
-          }}
-        >
-          <p className="lg:block hidden">CONTACT</p>
-          <i className="fa-solid fa-envelope lg:hidden block text-4xl"></i>
-        </button>
-      </div>
-    </div>
+      <ul className="flex gap-10 md:gap-14 lg:ml-auto">
+        <li>
+          <NavLink to="/about">
+            <span className="hidden lg:block">ABOUT</span>
+            <i className="block lg:hidden text-4xl fa-solid fa-circle-info"></i>
+          </NavLink>
+        </li>
+        <li>
+          <button onClick={() => scrollTo("performers-section")}>
+            <span className="hidden lg:block">SEASON LINEUP</span>
+            <i className="block lg:hidden text-4xl fa-solid fa-music"></i>
+          </button>
+        </li>
+        <li>
+          <button>
+            <span className="hidden lg:block">DONATIONS/SPONSORSHIPS</span>
+            <i className="block lg:hidden text-4xl fa-solid fa-circle-dollar-to-slot"></i>
+          </button>
+        </li>
+        <li>
+          <button onClick={() => scrollTo("concert-calendar-section")}>
+            <span className="hidden lg:block">CONCERT SCHEDULE</span>
+            <i className="block lg:hidden text-4xl fa-solid fa-calendar"></i>
+          </button>
+        </li>
+        <li>
+          <button onClick={() => scrollTo("contact-section")}>
+            <span className="hidden lg:block">CONTACT</span>
+            <i className="block lg:hidden text-4xl fa-solid fa-envelope"></i>
+          </button>
+        </li>
+      </ul>
+    </nav>
   );
-};
+}
 
 export default Navigation;

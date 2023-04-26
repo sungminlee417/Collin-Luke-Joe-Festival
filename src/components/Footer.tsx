@@ -1,14 +1,18 @@
+import { Fragment } from "react";
+
 const Footer = () => {
-  const date = new Date();
-  const year = date.getFullYear();
+  const currentYear = new Date().getFullYear();
+
   return (
-    <section>
-      <div className="md:p-10 p-4 text-right">
-        <div className="md:text-2xl text-lg">
-          &copy; {year} Long Lake Musical Festival
+    <footer className="bg-gray-800 text-white">
+      <div className="container mx-auto py-10 px-4">
+        <div className="text-right">
+          <p className="text-lg font-semibold">
+            &copy; {currentYear} Long Lake Musical Festival
+          </p>
         </div>
       </div>
-    </section>
+    </footer>
   );
 };
 

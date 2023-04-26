@@ -16,17 +16,21 @@ const ArtistImage = ({ image, artist }: ArtistImageProps) => {
   }, []);
 
   return (
-    <>
-      <button className="h-full w-full" onClick={openModal}>
+    <div className="relative w-full h-full">
+      <button
+        className="w-full h-full overflow-hidden"
+        onClick={openModal}
+        aria-label={`View ${artist.name}'s information`}
+      >
         <img
           src={image}
-          className="h-full w-full hover:scale-105 object-cover transition"
+          className="w-full h-full object-cover transform transition duration-300 hover:scale-105"
           alt={artist.name}
         />
       </button>
       <AnimatePresence>
         {showModal && (
-          <Modal>
+          <Modal onClose={closeModal}>
             <ArtistImageModal
               image={image}
               artist={artist}
@@ -35,7 +39,7 @@ const ArtistImage = ({ image, artist }: ArtistImageProps) => {
           </Modal>
         )}
       </AnimatePresence>
-    </>
+    </div>
   );
 };
 

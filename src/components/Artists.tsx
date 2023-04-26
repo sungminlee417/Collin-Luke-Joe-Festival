@@ -11,7 +11,9 @@ const Artists = () => {
   const renderArtists = () => {
     return lineupArr.map((artist) => (
       <SwiperSlide key={artist.id}>
-        <IndividualArtist artist={artist} />
+        <div className="w-full h-full flex justify-center">
+          <IndividualArtist artist={artist} />
+        </div>
       </SwiperSlide>
     ));
   };
