@@ -1,30 +1,37 @@
 import { useState, useEffect } from "react";
 import horizontalLogo from "../images/horizontal-logo.png";
 import navLogo from "../images/nav-logo.png";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Navigation = () => {
   const [scroll, setScroll] = useState(false);
+  const navigate = useNavigate();
+
   useEffect(() => {
-    window.onscroll = function () {
+    function handleScroll() {
       if (window.scrollY > 50) {
         setScroll(true);
       } else {
         setScroll(false);
       }
-    };
-  }, [scroll]);
+    }
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   function scrollSmoothlyTo(className: string): void {
-    const element = document.querySelector<HTMLElement>(`.${className}`)!;
-    const offset = (document.querySelector(".navigation") as HTMLElement)
-      .offsetHeight;
+    navigate("/");
+    setTimeout(() => {
+      const element = document.querySelector<HTMLElement>(`.${className}`)!;
+      const offset = document.querySelector(".navigation")?.clientHeight || 0;
 
-    const topOffset =
-      element.getBoundingClientRect().top + window.pageYOffset - offset;
-    window.scrollTo({
-      behavior: "smooth",
-      top: topOffset,
-    });
+      const topOffset =
+        element.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({
+        behavior: "smooth",
+        top: topOffset,
+      });
+    }, 50);
   }
 
   return (
@@ -53,6 +60,17 @@ const Navigation = () => {
         </button>
       </div>
       <div className="flex lg:gap-10 md:gap-14 gap-10">
+        <NavLink
+          to="/about"
+          className="text-[#406882] hover:text-[#2c5153] m-auto"
+        >
+          <p className="lg:block hidden">ABOUT</p>
+          <i className="fa-solid fa-circle-info lg:hidden block text-4xl"></i>
+        </NavLink>
+        <button className="text-[#406882] hover:text-[#2c5153]">
+          <p className="lg:block hidden">DONATIONS/SPONSORSHIPS</p>
+          <i className="fa-solid fa-circle-dollar-to-slot lg:hidden block text-4xl"></i>
+        </button>
         <button
           className="text-[#406882] hover:text-[#2c5153]"
           onClick={() => {
@@ -71,10 +89,7 @@ const Navigation = () => {
           <p className="lg:block hidden">CONCERT SCHEDULE</p>
           <i className="fa-solid fa-calendar lg:hidden block text-4xl"></i>
         </button>
-        <button className="text-[#406882] hover:text-[#2c5153]">
-          <p className="lg:block hidden">DONATIONS/SPONSORSHIPS</p>
-          <i className="fa-solid fa-circle-dollar-to-slot lg:hidden block text-4xl"></i>
-        </button>
+
         <button
           className="text-[#406882] hover:text-[#2c5153]"
           onClick={() => {

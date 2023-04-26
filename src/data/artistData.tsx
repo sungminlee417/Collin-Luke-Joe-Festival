@@ -13,6 +13,7 @@ import muse3 from "../images/muse3.jpg";
 import muse4 from "../images/muse4.jpg";
 import muse5 from "../images/muse5.jpg";
 import muse6 from "../images/muse6.jpg";
+import inNomineImage from "../images/innomine.jpeg";
 import { ArtistInterface } from "../models/artists";
 
 export const lineup: ArtistInterface = {
@@ -213,5 +214,31 @@ export const lineup: ArtistInterface = {
       </>
     ),
     images: [katherineImage],
+  },
+  6: {
+    id: 6,
+    name: "In Nomine",
+    biography: (
+      <>
+        <div>
+          Hailing from The Juilliard School, In Nomine Ensemble has recently
+          joined the historical-performance scene along the East Coast. Because
+          of their unique instrumentation of Baroque violin, Baroque flute,
+          Baroque bassoon, and harpsichord, they offer a distinct interpretation
+          to the pieces they perform, mostly written during the
+          seventeenth-eighteenth centuries, and usually not for their
+          instrumental combination. This perspective allows the ensemble to
+          experiment with various improvisation, transpositions, and textures
+          that would not be possible with a standard Baroque instrumentation of
+          violins, cello, and harpsichord. Hanbyeol Lee, Morgan Davison, Mei
+          Stone, and Jimmy Drancsak make up the ensemble, Drancsak being a
+          Skaneateles native himself. Having first performed together in various
+          groups in New York City, The Netherlands, and Germany, they decided to
+          form In Nomine Ensemble and bring their passion of
+          historically-informed performance to various audiences.
+        </div>
+      </>
+    ),
+    images: [inNomineImage],
   },
 };

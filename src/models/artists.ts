@@ -5,10 +5,13 @@ export interface Artist {
   images: string[];
 }
 
-export interface Image {
+export interface ArtistImageProps {
   image: string;
   artist: Artist;
-  onClose?: () => void;
+}
+
+export interface ArtistImageModalProps extends ArtistImageProps {
+  onClose: () => void;
 }
 
 export interface ArtistInterface {

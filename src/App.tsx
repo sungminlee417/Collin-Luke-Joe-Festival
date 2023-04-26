@@ -1,26 +1,36 @@
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Navigation from "./components/Navigation";
 import LandingPage from "./components/LandingPage";
 import Artists from "./components/Artists";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-// import Newsletter from "./components/Newsletter";
 import ConcertDates from "./components/ConcertDates";
+import About from "./components/About";
 
-function App() {
+const App = () => {
   return (
-    <>
-      <div className="flex flex-col" id="App">
-        <Navigation />
-        <LandingPage />
-        <Artists />
-        <ConcertDates />
-        {/* <Newsletter /> */}
-        <Contact />
-        <Footer />
+    <div className="flex flex-col h-screen" id="App">
+      <Navigation />
+      <div className="flex-grow">
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <LandingPage />
+                <Artists />
+                <ConcertDates />
+                <Contact />
+              </>
+            }
+          />
+          <Route path="/about" element={<About />} />
+        </Routes>
       </div>
-    </>
+      <Footer />
+    </div>
   );
-}
+};
 
 export default App;

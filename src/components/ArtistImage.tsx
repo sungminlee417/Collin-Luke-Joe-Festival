@@ -1,15 +1,23 @@
-import { useState } from "react";
-import { Image } from "../models/artists";
+import { useState, useCallback } from "react";
 import ArtistImageModal from "./ArtistImageModal";
 import { Modal } from "../context/Modal";
 import { AnimatePresence } from "framer-motion";
+import { ArtistImageProps } from "../models/artists";
 
-const ArtistImage = ({ image, artist }: Image) => {
+const ArtistImage = ({ image, artist }: ArtistImageProps) => {
   const [showModal, setShowModal] = useState(false);
+
+  const openModal = useCallback(() => {
+    setShowModal(true);
+  }, []);
+
+  const closeModal = useCallback(() => {
+    setShowModal(false);
+  }, []);
 
   return (
     <>
-      <button className="h-full w-full" onClick={() => setShowModal(true)}>
+      <button className="h-full w-full" onClick={openModal}>
         <img
           src={image}
           className="h-full w-full hover:scale-105 object-cover transition"
@@ -22,7 +30,7 @@ const ArtistImage = ({ image, artist }: Image) => {
             <ArtistImageModal
               image={image}
               artist={artist}
-              onClose={() => setShowModal(false)}
+              onClose={closeModal}
             />
           </Modal>
         )}

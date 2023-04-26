@@ -8,6 +8,14 @@ import IndividualArtist from "./IndividualArtist";
 const Artists = () => {
   const lineupArr = Object.values(lineup);
 
+  const renderArtists = () => {
+    return lineupArr.map((artist) => (
+      <SwiperSlide key={artist.id}>
+        <IndividualArtist artist={artist} />
+      </SwiperSlide>
+    ));
+  };
+
   return (
     <section className="performers-section mx-2 md:mx-4 lg:mx-6 md:my-24 my-20 h-224 p-14 flex flex-col gap-14">
       <h3 className="text-2xl font-bold">SEASON LINEUP</h3>
@@ -35,13 +43,7 @@ const Artists = () => {
         modules={[Autoplay, Navigation]}
         className="mySwiper h-full w-full"
       >
-        {lineupArr.map((artist) => {
-          return (
-            <SwiperSlide key={artist.id}>
-              <IndividualArtist artist={artist} />
-            </SwiperSlide>
-          );
-        })}
+        {renderArtists()}
       </Swiper>
     </section>
   );

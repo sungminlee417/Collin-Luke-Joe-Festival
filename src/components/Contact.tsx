@@ -9,10 +9,14 @@ const Contact = () => {
   const initialValues: MyFormValues = { subject: "", message: "" };
 
   return (
-    <div className="contact-section flex flex-col md:m-20 m-12 md:gap-10 gap-16">
-      <div className="md:text-8xl text-7xl font-thin tracking-wide text-center">
+    <div className="contact-section flex flex-col md:m-20 m-12 md:gap-10 gap-16 items-center">
+      <h3 className="md:text-8xl text-7xl font-thin tracking-wide text-center">
         Contact Us
-      </div>
+      </h3>
+      <h4 className="italic text-2xl">
+        For questions or additional information about the Off the Dock Chamber
+        Festival, fill out the form below
+      </h4>
       <div>
         <Formik
           initialValues={initialValues}
