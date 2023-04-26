@@ -37,7 +37,7 @@ const Navigation = () => {
   return (
     <div
       className={`navigation flex fixed transition justify-between z-10 lg:px-28 md:px-14 px-10 py-8 font-bold md:text-2xl font-source w-full ${
-        scroll ? "bg-white shadow-md" : "text-white"
+        scroll ? "bg-white shadow-md text-[#7895B2]" : "text-[#AEBDCA]"
       }`}
     >
       <div className="align-middle">
@@ -62,17 +62,17 @@ const Navigation = () => {
       <div className="flex lg:gap-10 md:gap-14 gap-10">
         <NavLink
           to="/about"
-          className="text-[#AEBDCA] hover:text-[#7895B2] m-auto"
+          className="m-auto"
         >
           <p className="lg:block hidden">ABOUT</p>
           <i className="fa-solid fa-circle-info lg:hidden block text-4xl"></i>
         </NavLink>
-        <button className="text-[#AEBDCA] hover:text-[#7895B2]">
+        <button className="">
           <p className="lg:block hidden">DONATIONS/SPONSORSHIPS</p>
           <i className="fa-solid fa-circle-dollar-to-slot lg:hidden block text-4xl"></i>
         </button>
         <button
-          className="text-[#AEBDCA] hover:text-[#7895B2]"
+          className=""
           onClick={() => {
             scrollSmoothlyTo("performers-section");
           }}
@@ -81,7 +81,7 @@ const Navigation = () => {
           <i className="fa-solid fa-music lg:hidden block text-4xl"></i>
         </button>
         <button
-          className="text-[#AEBDCA] hover:text-[#7895B2]"
+          className=""
           onClick={() => {
             scrollSmoothlyTo("concert-calendar-section");
           }}
@@ -91,7 +91,7 @@ const Navigation = () => {
         </button>
 
         <button
-          className="text-[#AEBDCA] hover:text-[#7895B2]"
+          className=""
           onClick={() => {
             scrollSmoothlyTo("contact-section");
           }}
