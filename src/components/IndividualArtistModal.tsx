@@ -34,8 +34,12 @@ const IndividualArtistModal = ({ artist, onClose }: IndividualArtistProps) => {
           </div>
         </div>
       </motion.section>
-      <button onClick={onClose} className="absolute top-10 right-10">
-        <i className="fa-solid fa-xmark text-white text-5xl" />
+      <button
+        onClick={onClose}
+        className="absolute top-4 right-4 text-gray-400 hover:text-white focus:outline-none"
+      >
+        <span className="sr-only">Close modal</span>
+        <i className="fas fa-times text-4xl"></i>
       </button>
     </>
   );

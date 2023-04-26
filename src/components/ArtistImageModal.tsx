@@ -15,7 +15,7 @@ const ArtistImageModal = React.memo(
           className="absolute top-4 right-4 text-gray-400 hover:text-white focus:outline-none"
         >
           <span className="sr-only">Close modal</span>
-          <i className="fas fa-times text-2xl"></i>
+          <i className="fas fa-times text-4xl"></i>
         </button>
         <motion.img
           className="max-w-full max-h-screen object-contain"
