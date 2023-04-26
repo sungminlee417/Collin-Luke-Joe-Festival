@@ -62,17 +62,17 @@ const Navigation = () => {
       <div className="flex lg:gap-10 md:gap-14 gap-10">
         <NavLink
           to="/about"
-          className="text-[#406882] hover:text-[#2c5153] m-auto"
+          className="text-[#AEBDCA] hover:text-[#7895B2] m-auto"
         >
           <p className="lg:block hidden">ABOUT</p>
           <i className="fa-solid fa-circle-info lg:hidden block text-4xl"></i>
         </NavLink>
-        <button className="text-[#406882] hover:text-[#2c5153]">
+        <button className="text-[#AEBDCA] hover:text-[#7895B2]">
           <p className="lg:block hidden">DONATIONS/SPONSORSHIPS</p>
           <i className="fa-solid fa-circle-dollar-to-slot lg:hidden block text-4xl"></i>
         </button>
         <button
-          className="text-[#406882] hover:text-[#2c5153]"
+          className="text-[#AEBDCA] hover:text-[#7895B2]"
           onClick={() => {
             scrollSmoothlyTo("performers-section");
           }}
@@ -81,7 +81,7 @@ const Navigation = () => {
           <i className="fa-solid fa-music lg:hidden block text-4xl"></i>
         </button>
         <button
-          className="text-[#406882] hover:text-[#2c5153]"
+          className="text-[#AEBDCA] hover:text-[#7895B2]"
           onClick={() => {
             scrollSmoothlyTo("concert-calendar-section");
           }}
@@ -91,7 +91,7 @@ const Navigation = () => {
         </button>
 
         <button
-          className="text-[#406882] hover:text-[#2c5153]"
+          className="text-[#AEBDCA] hover:text-[#7895B2]"
           onClick={() => {
             scrollSmoothlyTo("contact-section");
           }}

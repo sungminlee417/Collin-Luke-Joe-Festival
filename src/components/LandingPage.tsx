@@ -15,7 +15,7 @@ const LandingPage = () => {
     >
       <div className="title absolute flex flex-col items-center justify-center lg:text-10xl text-[#3A6351] h-full font-merriweather font-semibold text-center md:text-9xl text-8xl p-4">
         <img className=" w-5/6" src={landingPageLog} alt="logo" />
-        <div className="landing-desc lg:text-4xl md:text-3xl text-3xl text-white italic p-10 font-source">
+        <div className="landing-desc lg:text-4xl md:text-3xl text-3xl text-white italic p-5 font-source">
           <strong>{title}</strong> {description}
         </div>
       </div>
