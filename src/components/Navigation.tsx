@@ -10,7 +10,13 @@ function Navigation() {
 
   useEffect(() => {
     function handleScroll() {
-      setScroll(window.scrollY > 50);
+      const sectionEl = document.querySelector(`.landingpage-section`);
+      const navEl = document.querySelector(".navigation");
+      if (sectionEl && navEl) {
+        const elementOffset = sectionEl.clientHeight || 0;
+        const offset = navEl.clientHeight || 0;
+        setScroll(window.scrollY > elementOffset - offset);
+      }
     }
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);

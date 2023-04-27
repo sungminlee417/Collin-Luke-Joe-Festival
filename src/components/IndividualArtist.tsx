@@ -1,6 +1,6 @@
 import { useState } from "react";
 import IndividualArtistModal from "./IndividualArtistModal";
-import { IndividualArtistProps } from "../models/artists";
+import { IndividualArtistProps } from "../models/interfaces";
 import { Modal } from "../context/Modal";
 import { AnimatePresence } from "framer-motion";
 

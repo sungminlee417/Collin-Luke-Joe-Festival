@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import React, { useCallback } from "react";
-import { ArtistImageModalProps } from "../models/artists";
+import { ArtistImageModalProps } from "../models/interfaces";
 
 const ArtistImageModal = React.memo(
   ({ image, artist, onClose }: ArtistImageModalProps) => {

@@ -2,7 +2,7 @@ import { useState, useCallback } from "react";
 import ArtistImageModal from "./ArtistImageModal";
 import { Modal } from "../context/Modal";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArtistImageProps } from "../models/artists";
+import { ArtistImageProps } from "../models/interfaces";
 
 const ArtistImage = ({ image, artist }: ArtistImageProps) => {
   const [showModal, setShowModal] = useState(false);

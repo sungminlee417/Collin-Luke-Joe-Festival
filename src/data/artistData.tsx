@@ -14,7 +14,7 @@ import muse4 from "../images/muse4.jpg";
 import muse5 from "../images/muse5.jpg";
 import muse6 from "../images/muse6.jpg";
 import inNomineImage from "../images/innomine.jpeg";
-import { ArtistInterface } from "../models/artists";
+import { ArtistInterface } from "../models/interfaces";
 
 export const lineup: ArtistInterface = {
   1: {

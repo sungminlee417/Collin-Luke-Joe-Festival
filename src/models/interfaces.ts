@@ -22,3 +22,12 @@ export interface IndividualArtistProps {
   artist: Artist;
   onClose?: () => void;
 }
+
+export interface StaffMemberProps {
+  member: {
+    name: string;
+    role: string;
+    image?: string;
+    bio?: string;
+  };
+}

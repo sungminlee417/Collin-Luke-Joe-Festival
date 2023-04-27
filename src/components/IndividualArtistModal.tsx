@@ -1,4 +1,4 @@
-import { IndividualArtistProps } from "../models/artists";
+import { IndividualArtistProps } from "../models/interfaces";
 import ArtistImage from "./ArtistImage";
 import { motion } from "framer-motion";
 
