@@ -58,7 +58,7 @@ const ConcertDates = () => {
     });
 
   return (
-    <section className="py-24">
+    <section className="concert-calendar-section  py-24">
       <div className="container mx-auto">
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-4">Upcoming Concert Dates</h2>
