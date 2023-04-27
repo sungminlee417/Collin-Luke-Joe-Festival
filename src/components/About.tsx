@@ -19,7 +19,42 @@ const About = () => {
       name: "Natalie Pang",
       role: "Co-Artistic Director",
       image: natalieImage,
-      bio: "Natalie is a passionate advocate for the arts and has been involved in various community arts programs for over a decade. She holds a degree in Fine Arts and has exhibited her work in galleries across the country.",
+      bio: (
+        <>
+          <div>
+            Natalie Pang is a recent graduate from the Eastman School of Music,
+            where she completed her MM in Piano Performance and MA in Music
+            Theory Pedagogy. She received her Bachelor of Music in Piano
+            Performance and Music Theory from Eastman, and is a member of the
+            music society Pi Kappa Lambda.
+          </div>
+          <div>
+            As a pianist, Natalie has been first prizewinner of competitions
+            such as the Canadian Music Competition and Montreal Classical Music
+            Festival, and has given solo recitals in venues across the United
+            States and Canada. Natalie is an active collaborative pianist,
+            performing with chamber ensembles at Eastman and accompanying for
+            public events, including the University of Rochester Schwartz
+            Memorial Service and Black History Month at Eastman Recital.
+          </div>
+          <div>
+            As a music theorist, she has conducted research on topic theory and
+            music semiology, Schenkerian analysis, and underrepresented
+            composers in performance and pedagogy, and presented her paper,
+            “Performing the Flight Topic in Scriabin’s Fourth Sonata” at the
+            150th Anniversary of Scriabin Conference. Natalie is also an avid
+            songwriter, and recently was a winner of the songwriting contest “If
+            All of Rochester Wrote the Same Song”, with her song featured on
+            radio shows Open Tunings with Scott Regan and Connections with Evan
+            Dawson, and in performance at the JCC Centerstage in Rochester, NY.
+          </div>
+          <div>
+            In her spare time, Natalie loves running, learning the theremin, and
+            baking in an experimental fashion using generously approximate
+            measurements.
+          </div>
+        </>
+      ),
     },
     {
       id: 2,
@@ -115,7 +150,7 @@ const About = () => {
   ];
 
   return (
-    <div className="container mx-auto mt-60 px-10 mb-24">
+    <div className="about-page container mx-auto mt-60 px-10 mb-24">
       <h1 className="text-6xl font-bold mb-20">About Us</h1>
 
       <div className="mb-20">

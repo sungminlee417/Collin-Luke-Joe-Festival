@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="bg-gray-800 text-white">
       <div className="container mx-auto py-10 px-4">
         <div className="text-right">
-          <p className="text-lg font-semibold">
+          <p className="text-xl font-semibold">
             &copy; {currentYear} Long Lake Musical Festival
           </p>
         </div>

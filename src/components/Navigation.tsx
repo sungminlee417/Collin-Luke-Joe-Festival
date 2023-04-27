@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import horizontalLogo from "../images/horizontal-logo.png";
 import navLogo from "../images/nav-logo.png";
@@ -7,13 +7,20 @@ import navLogo from "../images/nav-logo.png";
 function Navigation() {
   const [scroll, setScroll] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     function handleScroll() {
-      const sectionEl = document.querySelector(`.landingpage-section`);
+      const landingPageEl = document.querySelector(`.landingpage-section`);
+      const aboutPageEl = document.querySelector(`.about-page`) as HTMLElement;
       const navEl = document.querySelector(".navigation");
-      if (sectionEl && navEl) {
-        const elementOffset = sectionEl.clientHeight || 0;
+
+      if (landingPageEl && navEl) {
+        const elementOffset = landingPageEl.clientHeight || 0;
+        const offset = navEl.clientHeight || 0;
+        setScroll(window.scrollY > elementOffset - offset);
+      } else if (aboutPageEl && navEl) {
+        const elementOffset = aboutPageEl.offsetTop;
         const offset = navEl.clientHeight || 0;
         setScroll(window.scrollY > elementOffset - offset);
       }
