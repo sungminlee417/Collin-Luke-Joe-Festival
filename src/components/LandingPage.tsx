@@ -28,7 +28,11 @@ const LandingPage = () => {
   }
 
   return (
-    <Parallax bgImage={backgroundImage} strength={500}>
+    <Parallax
+      bgImage={backgroundImage}
+      strength={500}
+      bgImageStyle={{ objectFit: "cover", backgroundPosition: "50% 50%" }}
+    >
       <div className="landingpage-section h-screen relative">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
