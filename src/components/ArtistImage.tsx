@@ -1,7 +1,7 @@
 import { useState, useCallback } from "react";
 import ArtistImageModal from "./ArtistImageModal";
 import { Modal } from "../context/Modal";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { ArtistImageProps } from "../models/artists";
 
 const ArtistImage = ({ image, artist }: ArtistImageProps) => {
@@ -16,7 +16,11 @@ const ArtistImage = ({ image, artist }: ArtistImageProps) => {
   }, []);
 
   return (
-    <div className="relative w-full h-full">
+    <motion.div
+      className="relative w-full h-full"
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+    >
       <button
         className="w-full h-full overflow-hidden"
         onClick={openModal}
@@ -24,7 +28,7 @@ const ArtistImage = ({ image, artist }: ArtistImageProps) => {
       >
         <img
           src={image}
-          className="w-full h-full object-cover transform transition duration-300 hover:scale-105"
+          className="w-full h-full object-cover transform transition duration-300"
           alt={artist.name}
         />
       </button>
@@ -39,7 +43,7 @@ const ArtistImage = ({ image, artist }: ArtistImageProps) => {
           </Modal>
         )}
       </AnimatePresence>
-    </div>
+    </motion.div>
   );
 };
 
