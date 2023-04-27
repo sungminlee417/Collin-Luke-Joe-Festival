@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Parallax } from "react-parallax";
 import backgroundImage from "../images/sample_landing_page.jpg";
 import landingPageLogo from "../images/landing-logo.png";
 import { motion } from "framer-motion";
@@ -27,44 +28,43 @@ const LandingPage = () => {
   }
 
   return (
-    <div
-      className="landingpage-section h-screen bg-cover relative flex items-center justify-center overflow-hidden"
-      style={{ backgroundImage: `url("${backgroundImage}")` }}
-    >
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        className="title absolute flex flex-col items-center justify-center h-full p-4"
-      >
-        <motion.img
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.5 }}
-          className="w-5/6 max-w-lg"
-          src={landingPageLogo}
-          alt="logo"
-        />
+    <Parallax bgImage={backgroundImage} strength={500}>
+      <div className="landingpage-section h-screen relative">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 2 }}
-          className="landing-desc text-white mt-8 text-2xl lg:text-4xl font-serif italic leading-relaxed max-w-4xl text-center"
+          transition={{ duration: 1 }}
+          className="title absolute flex flex-col items-center justify-center h-full p-4 w-full"
         >
-          <strong className="text-[#3A6351]">{title}</strong>
-          <br />
-          {description}
+          <motion.img
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.5 }}
+            className="w-5/6 max-w-lg"
+            src={landingPageLogo}
+            alt="logo"
+          />
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 2 }}
+            className="landing-desc text-white mt-8 text-2xl lg:text-4xl font-serif italic leading-relaxed max-w-4xl text-center"
+          >
+            <strong className="text-[#3A6351]">{title}</strong>
+            <br />
+            {description}
+          </motion.div>
+          <motion.button
+            whileHover="hover"
+            variants={buttonVariants}
+            onClick={scrollTo}
+            className="bg-[#3A6351] hover:bg-[#5A8C6A] text-white py-3 px-6 rounded-full mt-8 font-semibold text-xl"
+          >
+            Join the festival
+          </motion.button>
         </motion.div>
-        <motion.button
-          whileHover="hover"
-          variants={buttonVariants}
-          onClick={scrollTo}
-          className="bg-[#3A6351] hover:bg-[#5A8C6A] text-white py-3 px-6 rounded-full mt-8 font-semibold text-xl"
-        >
-          Join the festival
-        </motion.button>
-      </motion.div>
-    </div>
+      </div>
+    </Parallax>
   );
 };
 
