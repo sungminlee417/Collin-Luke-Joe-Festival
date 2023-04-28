@@ -65,21 +65,42 @@ function Navigation() {
       <ul className="flex gap-10 md:gap-14 lg:ml-auto">
         <li>
           <NavLink to="/about">
-            <span className={`hidden lg:block hover:text-gray-900 transition-all duration-300 ${
-        scroll ? "text-[#c6b393] hover:text-[#b8a179]": "text-[#E1D7C6] hover:text-[#c6b393]"}`}>
-            
+            <span
+              className={`hidden lg:block hover:text-gray-900 transition-all duration-300 ${
+                scroll
+                  ? "text-[#c6b393] hover:text-[#b8a179]"
+                  : "text-[#E1D7C6] hover:text-[#c6b393]"
+              }`}
+            >
               ABOUT US
             </span>
-            <i className="block lg:hidden text-4xl fa-solid fa-circle-info"></i>
+            <i
+              className={`block lg:hidden text-4xl fa-solid fa-circle-info ${
+                scroll
+                  ? "text-[#c6b393] hover:text-[#b8a179]"
+                  : "text-[#E1D7C6] hover:text-[#c6b393]"
+              }`}
+            ></i>
           </NavLink>
         </li>
         <li>
           <button>
-          <span className={`hidden lg:block hover:text-gray-900 transition-all duration-300 ${
-        scroll ? "text-[#c6b393] hover:text-[#b8a179]": "text-[#E1D7C6] hover:text-[#c6b393]"}`}>
+            <span
+              className={`hidden lg:block hover:text-gray-900 transition-all duration-300 ${
+                scroll
+                  ? "text-[#c6b393] hover:text-[#b8a179]"
+                  : "text-[#E1D7C6] hover:text-[#c6b393]"
+              }`}
+            >
               DONATE
             </span>
-            <i className="block lg:hidden text-4xl fa-solid fa-circle-dollar-to-slot"></i>
+            <i
+              className={`block lg:hidden text-4xl fa-solid fa-circle-dollar-to-slot ${
+                scroll
+                  ? "text-[#c6b393] hover:text-[#b8a179]"
+                  : "text-[#E1D7C6] hover:text-[#c6b393]"
+              }`}
+            ></i>
           </button>
         </li>
       </ul>
