@@ -223,7 +223,7 @@ const About = () => {
   ];
 
   return (
-    <div className="about-page container mx-auto mt-60 px-10 mb-24">
+    <div className="about-page container mx-auto mt-48 px-10 mb-24">
       <h1 className="text-6xl font-bold mb-20">About Us</h1>
 
       <div className="mb-20">

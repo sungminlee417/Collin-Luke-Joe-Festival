@@ -52,11 +52,11 @@ const LandingPage = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 2 }}
-            className="landing-desc text-white mt-8 text-2xl lg:text-4xl font-serif italic leading-relaxed max-w-4xl text-center"
+            className="landing-desc text-white mt-8 text-2xl lg:text-4xl font-serif leading-relaxed max-w-4xl text-center"
           >
             <strong className="text-[#3A6351]">{title}</strong>
             <br />
-            {description}
+            <p className="italic">{description}</p>
           </motion.div>
           <motion.button
             whileHover="hover"

@@ -17,7 +17,7 @@ const StaffMemberModal: React.FC<StaffMemberModalProps> = ({
 }) => {
   return (
     <motion.div
-      className="w-full max-w-screen-lg mx-auto mt-10 bg-white rounded-lg border border-gray-300 shadow-xl overflow-hidden p-2"
+      className="mx-4 max-w-screen-lg mt-10 bg-white rounded-lg border border-gray-300 shadow-xl overflow-hidden p-2"
       initial={{ opacity: 0, y: "-100vh" }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: "100vh" }}

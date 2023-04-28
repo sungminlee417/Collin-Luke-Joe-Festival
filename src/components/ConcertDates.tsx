@@ -15,7 +15,7 @@ const ConcertDates = () => {
       return (
         <motion.li
           key={event.title}
-          className="p-6 md:p-10 rounded-md shadow-md transition border border-gray-200 flex flex-col lg:flex-row justify-between md:gap-14 lg:items-center items-start"
+          className="p-6 md:p-10 rounded-md shadow-md transition border border-gray-200 flex flex-col lg:flex-row justify-between md:gap-14 lg:items-center items-start mx-4"
           ref={ref}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

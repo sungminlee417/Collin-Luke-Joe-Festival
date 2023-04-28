@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import horizontalLogo from "../images/horizontal-logo.png";
 import navLogo from "../images/nav-logo.png";
@@ -7,7 +7,6 @@ import navLogo from "../images/nav-logo.png";
 function Navigation() {
   const [scroll, setScroll] = useState(false);
   const navigate = useNavigate();
-  const location = useLocation();
 
   useEffect(() => {
     function handleScroll() {
