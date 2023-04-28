@@ -34,11 +34,11 @@ const ConcertDates = () => {
               <div className="flex items-center gap-4 md:gap-6 text-lg md:text-xl">
                 <div className="flex items-center gap-2">
                   <i className="fas fa-clock"></i>
-                  <div className="font-bold">{event.time}</div>
+                  <div className="font">{event.time}</div>
                 </div>
                 <div className="flex items-center gap-2">
                   <i className="fas fa-map-marker-alt"></i>
-                  <div className="font-bold">{event.location}</div>
+                  <div className="font">{event.location}</div>
                 </div>
               </div>
             </div>
@@ -48,7 +48,7 @@ const ConcertDates = () => {
               href={event.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex justify-center items-center w px-6 py-2 rounded-md bg-gray-900 text-white hover:bg-gray-800 transition"
+              className="flex justify-center items-center w px-6 py-2 rounded-md bg-[#579BB1] text-white hover:bg-[#4e8b9f] transition"
             >
               Tickets
             </a>

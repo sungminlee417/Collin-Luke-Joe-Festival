@@ -42,7 +42,7 @@ function Navigation() {
   return (
     <nav
       className={`navigation fixed flex justify-between w-full py-8 px-10 md:px-14 lg:px-28 font-bold md:text-2xl font-source transition z-10 ${
-        scroll ? "bg-white shadow-md text-[#7895B2]" : "text-[#AEBDCA]"
+        scroll ? "bg-white shadow-md text-[#ABC4AA]" : "text-[#AEBDCA]"
       }`}
     >
       <div className="align-middle">
@@ -65,7 +65,9 @@ function Navigation() {
       <ul className="flex gap-10 md:gap-14 lg:ml-auto">
         <li>
           <NavLink to="/about">
-            <span className="hidden lg:block text-[#4B5563] hover:text-gray-900 transition-all duration-300">
+            <span className={`hidden lg:block hover:text-gray-900 transition-all duration-300 ${
+        scroll ? "text-[#c6b393] hover:text-[#b8a179]": "text-[#E1D7C6] hover:text-[#c6b393]"}`}>
+            
               ABOUT US
             </span>
             <i className="block lg:hidden text-4xl fa-solid fa-circle-info"></i>
@@ -73,7 +75,8 @@ function Navigation() {
         </li>
         <li>
           <button>
-            <span className="hidden lg:block text-[#4B5563] hover:text-gray-900 transition-all duration-300">
+          <span className={`hidden lg:block hover:text-gray-900 transition-all duration-300 ${
+        scroll ? "text-[#c6b393] hover:text-[#b8a179]": "text-[#E1D7C6] hover:text-[#c6b393]"}`}>
               DONATE
             </span>
             <i className="block lg:hidden text-4xl fa-solid fa-circle-dollar-to-slot"></i>

@@ -27,7 +27,7 @@ const ContactForm = () => {
       <h3 className="md:text-7xl text-6xl font-thin tracking-wide text-center">
         Contact Us
       </h3>
-      <h4 className="italic text-xl text-center">
+      <h4 className="text-xl text-gray-700 text-center">
         For questions or additional information about the Off the Dock Chamber
         Festival, fill out the form below
       </h4>
@@ -59,7 +59,7 @@ const ContactForm = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="bg-[#A0937D] hover:bg-[#988a72] text-white p-6 tracking-wide rounded-md"
+                className="mx-auto w-1/2 text-2xl border border-[#c6b393] bg-white hover:bg-[#c6b393] text-[#c6b393] hover:text-white p-5 tracking-wide rounded-md"
               >
                 {isSubmitting ? "SENDING..." : "SEND MESSAGE"}
               </button>

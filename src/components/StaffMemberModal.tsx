@@ -46,7 +46,7 @@ const StaffMemberModal: React.FC<StaffMemberModalProps> = ({
       </div>
       <div className="px-6 py-4">
         <button
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded text-2xl"
+          className="bg-[#579BB1] hover:bg-[#4e8b9f] text-white font-bold py-4 px-8 rounded text-2xl"
           onClick={onClose}
         >
           Close

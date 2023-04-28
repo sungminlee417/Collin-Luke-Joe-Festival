@@ -54,7 +54,7 @@ const LandingPage = () => {
             transition={{ duration: 2 }}
             className="landing-desc text-white mt-8 text-2xl lg:text-4xl font-serif leading-relaxed max-w-4xl text-center"
           >
-            <strong className="text-[#3A6351]">{title}</strong>
+            <strong className="text-[#E1D7C6]">{title}</strong>
             <br />
             <p className="italic">{description}</p>
           </motion.div>
@@ -62,7 +62,7 @@ const LandingPage = () => {
             whileHover="hover"
             variants={buttonVariants}
             onClick={scrollTo}
-            className="bg-[#3A6351] hover:bg-[#5A8C6A] text-white py-3 px-6 rounded-full mt-8 font-semibold text-xl"
+            className="bg-[#579BB1] hover:bg-[#4e8b9f] text-white py-3 px-6 rounded-full mt-8 font-semibold text-xl"
           >
             Join the festival
           </motion.button>
