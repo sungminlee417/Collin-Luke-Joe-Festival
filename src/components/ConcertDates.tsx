@@ -15,7 +15,7 @@ const ConcertDates = () => {
       return (
         <motion.li
           key={event.title}
-          className="p-6 md:p-10 rounded-md shadow-md transition border border-gray-200 flex flex-col lg:flex-row justify-between md:gap-14 lg:items-center items-start mx-4"
+          className="bg-white p-6 md:p-10 rounded-md shadow-md transition border border-gray-200 flex flex-col lg:flex-row justify-between md:gap-14 lg:items-center items-start mx-4"
           ref={ref}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -58,7 +58,7 @@ const ConcertDates = () => {
     });
 
   return (
-    <section className="concert-calendar-section  py-24">
+    <section className="concert-calendar-section bg-[#F8F4EA] py-24">
       <div className="container mx-auto">
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-4">Upcoming Concert Dates</h2>
