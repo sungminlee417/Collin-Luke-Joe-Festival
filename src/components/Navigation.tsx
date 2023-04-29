@@ -84,7 +84,11 @@ function Navigation() {
           </NavLink>
         </li>
         <li>
-          <button>
+          <a
+            href="https://www.gofundme.com/f/support-a-festival-for-emerging-classical-artists?member=26590045&utm_campaign=p_cp+share-sheet&utm_content=undefined&utm_medium=copy_link_all&utm_source=customer&utm_term=undefined"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <span
               className={`hidden lg:block hover:text-gray-900 transition-all duration-300 ${
                 scroll
@@ -101,7 +105,7 @@ function Navigation() {
                   : "text-[#E1D7C6] hover:text-[#c6b393]"
               }`}
             ></i>
-          </button>
+          </a>
         </li>
       </ul>
     </nav>
