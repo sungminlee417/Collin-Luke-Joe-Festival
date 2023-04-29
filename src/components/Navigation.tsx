@@ -66,7 +66,7 @@ function Navigation() {
         <li>
           <NavLink to="/about">
             <span
-              className={`hidden lg:block hover:text-gray-900 transition-all duration-300 ${
+              className={`hidden lg:block transition-all duration-300 ${
                 scroll
                   ? "text-[#c6b393] hover:text-[#b8a179]"
                   : "text-[#E1D7C6] hover:text-[#c6b393]"
@@ -90,7 +90,7 @@ function Navigation() {
             rel="noopener noreferrer"
           >
             <span
-              className={`hidden lg:block hover:text-gray-900 transition-all duration-300 ${
+              className={`hidden lg:block transition-all duration-300 ${
                 scroll
                   ? "text-[#c6b393] hover:text-[#b8a179]"
                   : "text-[#E1D7C6] hover:text-[#c6b393]"

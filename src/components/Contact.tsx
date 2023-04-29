@@ -29,7 +29,7 @@ const ContactForm = () => {
       </h3>
       <h4 className="text-xl text-gray-700 text-center">
         For questions or additional information about the Off the Dock Chamber
-        Festival, fill out the form below
+        Festival, fill out the form below.
       </h4>
       <div className="w-full md:w-2/3 mt-8">
         <Formik

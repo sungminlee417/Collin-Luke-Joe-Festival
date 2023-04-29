@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="container mx-auto py-10 px-4">
         <div className="text-right">
           <p className="text-xl font-semibold">
-            &copy; {currentYear} Long Lake Musical Festival
+            &copy; {currentYear} Off The Dock Chamber Festival
           </p>
         </div>
       </div>
