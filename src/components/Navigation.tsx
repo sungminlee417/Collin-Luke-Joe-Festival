@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import horizontalLogo from "../images/horizontal-logo.png";
+import horizontalLogoWhite from "../images/horizontal-logo-white.png";
 import navLogo from "../images/nav-logo.png";
 
 function Navigation() {
@@ -51,7 +52,7 @@ function Navigation() {
           onClick={() => scrollTo("landingpage-section")}
         >
           <img
-            src={horizontalLogo}
+            src={scroll ? horizontalLogo : horizontalLogoWhite}
             alt="Logo"
             className="h-14 lg:block hidden object-contain"
           />

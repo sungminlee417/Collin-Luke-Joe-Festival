@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Parallax } from "react-parallax";
 import backgroundImage from "../images/sample_landing_page.jpg";
 import landingPageLogo from "../images/landing-logo.png";
+import landingPageLogoWhite from "../images/landing-logo-white.png";
 import { motion } from "framer-motion";
 
 const LandingPage = () => {
@@ -45,7 +46,7 @@ const LandingPage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.5 }}
             className="w-5/6 max-w-lg"
-            src={landingPageLogo}
+            src={landingPageLogoWhite}
             alt="logo"
           />
           <motion.div
