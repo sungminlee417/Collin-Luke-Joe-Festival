@@ -233,7 +233,7 @@ const About = () => {
           invigorating concert-going experience by embracing the energy of
           up-and-coming artists. With the promise of providing a gateway to
           connect with a engaged classical music loving community, OTD is an
-          inspiring modern platform for emerging artists on the East Coast
+          inspiring modern platform for emerging artists on the East Coast.
         </p>
       </div>
 
