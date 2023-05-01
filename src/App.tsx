@@ -7,6 +7,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import ConcertDates from "./components/ConcertDates";
 import About from "./components/About";
+import NotFound from "./components/NotFound";
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
             }
           />
           <Route path="/about" element={<About />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
       <Footer />
