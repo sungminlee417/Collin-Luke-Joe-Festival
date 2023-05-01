@@ -230,10 +230,10 @@ const About = () => {
         <h2 className="text-4xl font-bold mb-8">Mission Statement</h2>
         <p className="text-2xl">
           <strong>Off The Dock Chamber Festival</strong> aims to foster an
-          invigorating concert-going experience by embracing the energy of new
+          invigorating concert-going experience by embracing the energy of
           up-and-coming artists. With the promise of providing a gateway to
-          connect with a deeply engaged classical music loving community, OTD is
-          an inspiring modern platform for emerging artists on the East Coast
+          connect with a engaged classical music loving community, OTD is an
+          inspiring modern platform for emerging artists on the East Coast
         </p>
       </div>
 
