@@ -75,18 +75,24 @@ function Navigation() {
           <NavLink to="/about">
             <span
               className={`hidden lg:block transition-all duration-300 ${
-                scroll
+                match
+                ? scroll
                   ? "text-[#c6b393] hover:text-[#b8a179]"
                   : "text-[#E1D7C6] hover:text-[#c6b393]"
+                : 
+                    "text-[#c6b393] hover:text-[#b8a179]"
               }`}
             >
               ABOUT US
             </span>
             <i
               className={`block lg:hidden text-4xl fa-solid fa-circle-info ${
-                scroll
+                match
+                ? scroll
                   ? "text-[#c6b393] hover:text-[#b8a179]"
                   : "text-[#E1D7C6] hover:text-[#c6b393]"
+                : 
+                    "text-[#c6b393] hover:text-[#b8a179]"
               }`}
             ></i>
           </NavLink>
@@ -99,18 +105,24 @@ function Navigation() {
           >
             <span
               className={`hidden lg:block transition-all duration-300 ${
-                scroll
+                match
+                ? scroll
                   ? "text-[#c6b393] hover:text-[#b8a179]"
                   : "text-[#E1D7C6] hover:text-[#c6b393]"
+                : 
+                    "text-[#c6b393] hover:text-[#b8a179]"
               }`}
             >
               DONATE
             </span>
             <i
               className={`block lg:hidden text-4xl fa-solid fa-circle-dollar-to-slot ${
-                scroll
+                match
+                ? scroll
                   ? "text-[#c6b393] hover:text-[#b8a179]"
                   : "text-[#E1D7C6] hover:text-[#c6b393]"
+                : 
+                    "text-[#c6b393] hover:text-[#b8a179]"
               }`}
             ></i>
           </a>
