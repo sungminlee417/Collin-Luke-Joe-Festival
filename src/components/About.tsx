@@ -229,10 +229,12 @@ const About = () => {
       <div className="mb-20">
         <h2 className="text-4xl font-bold mb-8">Mission Statement</h2>
         <p className="text-2xl">
-          At our organization, we are dedicated to promoting the arts and
-          providing a platform for artists to showcase their work. We believe
-          that the arts play a vital role in our society and have the power to
-          inspire, challenge, and bring people together.
+          <strong>Off The Dock Chamber Festival</strong>
+          aims to foster an invigorating concert-going experience by embracing
+          the energy of new up-and-coming artists. With the promise of providing
+          a gateway to connect with a deeply engaged classical music loving
+          community, OTD is an inspiring modern platform for emerging artists on
+          the East Coast
         </p>
       </div>
 
