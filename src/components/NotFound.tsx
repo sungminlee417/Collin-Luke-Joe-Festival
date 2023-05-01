@@ -10,7 +10,7 @@ const NotFound = () => {
         Sorry, the page you are looking for cannot be found.
       </p>
       <button
-        className="bg-[#579BB1] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+        className="bg-[#579BB1] hover:bg-[#4e8b9f] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
         onClick={() => window.history.back()}
       >
         Go Back
