@@ -4,12 +4,29 @@ import { NavLink } from "react-router-dom";
 import horizontalLogo from "../images/horizontal-logo.png";
 import horizontalLogoWhite from "../images/horizontal-logo-white.png";
 import navLogo from "../images/nav-logo.png";
+import navLogoWhite from "../images/nav-logo-white.png";
 import { motion } from "framer-motion";
 
 function Navigation() {
   const [scroll, setScroll] = useState(false);
   const navigate = useNavigate();
   const match = useMatch("/");
+
+  useEffect(() => {
+    const landingPageEl = document.querySelector(`.landingpage-section`);
+    const aboutPageEl = document.querySelector(`.about-page`) as HTMLElement;
+    const navEl = document.querySelector(".navigation");
+
+    if (landingPageEl && navEl) {
+      const elementOffset = landingPageEl.clientHeight || 0;
+      const offset = navEl.clientHeight || 0;
+      setScroll(window.scrollY > elementOffset - offset);
+    } else if (aboutPageEl && navEl) {
+      const elementOffset = aboutPageEl.offsetTop;
+      const offset = navEl.clientHeight || 0;
+      setScroll(window.scrollY > elementOffset - offset);
+    }
+  }, []);
 
   useEffect(() => {
     function handleScroll() {
@@ -78,7 +95,7 @@ function Navigation() {
             className="h-14 lg:block hidden object-contain"
           />
           <img
-            src={navLogo}
+            src={match ? (scroll ? navLogo : navLogoWhite) : navLogo}
             alt="Logo"
             className="block h-14 lg:hidden object-contain text-4xl"
           />
