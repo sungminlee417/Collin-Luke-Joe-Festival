@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import horizontalLogo from "../images/horizontal-logo.png";
 import horizontalLogoWhite from "../images/horizontal-logo-white.png";
 import navLogo from "../images/nav-logo.png";
+import { motion } from "framer-motion";
 
 function Navigation() {
   const [scroll, setScroll] = useState(false);
@@ -47,7 +48,20 @@ function Navigation() {
         scroll ? "bg-white shadow-md text-[#ABC4AA]" : "text-[#AEBDCA]"
       }`}
     >
-      <div className="align-middle">
+      <motion.div
+        className="align-middle"
+        transition={{
+          type: "spring",
+          duration: 0.5,
+          damping: 7,
+          stiffness: 50,
+        }}
+        initial={{
+          x: -100,
+          opacity: 0,
+        }}
+        animate={{ x: 0, opacity: 1 }}
+      >
         <button
           className="flex items-center"
           onClick={() => scrollTo("landingpage-section")}
@@ -69,18 +83,30 @@ function Navigation() {
             className="block h-14 lg:hidden object-contain text-4xl"
           />
         </button>
-      </div>
-      <ul className="flex gap-10 md:gap-14 lg:ml-auto">
+      </motion.div>
+      <motion.ul
+        className="flex gap-10 md:gap-14 lg:ml-auto"
+        transition={{
+          type: "spring",
+          duration: 0.5,
+          damping: 7,
+          stiffness: 50,
+        }}
+        initial={{
+          x: 100,
+          opacity: 0,
+        }}
+        animate={{ x: 0, opacity: 1 }}
+      >
         <li>
           <NavLink to="/about">
             <span
               className={`hidden lg:block transition-all duration-300 ${
                 match
-                ? scroll
-                  ? "text-[#c6b393] hover:text-[#b8a179]"
-                  : "text-[#E1D7C6] hover:text-[#c6b393]"
-                : 
-                    "text-[#c6b393] hover:text-[#b8a179]"
+                  ? scroll
+                    ? "text-[#c6b393] hover:text-[#b8a179]"
+                    : "text-[#E1D7C6] hover:text-[#c6b393]"
+                  : "text-[#c6b393] hover:text-[#b8a179]"
               }`}
             >
               ABOUT US
@@ -88,11 +114,10 @@ function Navigation() {
             <i
               className={`block lg:hidden text-4xl fa-solid fa-circle-info ${
                 match
-                ? scroll
-                  ? "text-[#c6b393] hover:text-[#b8a179]"
-                  : "text-[#E1D7C6] hover:text-[#c6b393]"
-                : 
-                    "text-[#c6b393] hover:text-[#b8a179]"
+                  ? scroll
+                    ? "text-[#c6b393] hover:text-[#b8a179]"
+                    : "text-[#E1D7C6] hover:text-[#c6b393]"
+                  : "text-[#c6b393] hover:text-[#b8a179]"
               }`}
             ></i>
           </NavLink>
@@ -106,11 +131,10 @@ function Navigation() {
             <span
               className={`hidden lg:block transition-all duration-300 ${
                 match
-                ? scroll
-                  ? "text-[#c6b393] hover:text-[#b8a179]"
-                  : "text-[#E1D7C6] hover:text-[#c6b393]"
-                : 
-                    "text-[#c6b393] hover:text-[#b8a179]"
+                  ? scroll
+                    ? "text-[#c6b393] hover:text-[#b8a179]"
+                    : "text-[#E1D7C6] hover:text-[#c6b393]"
+                  : "text-[#c6b393] hover:text-[#b8a179]"
               }`}
             >
               DONATE
@@ -118,16 +142,15 @@ function Navigation() {
             <i
               className={`block lg:hidden text-4xl fa-solid fa-circle-dollar-to-slot ${
                 match
-                ? scroll
-                  ? "text-[#c6b393] hover:text-[#b8a179]"
-                  : "text-[#E1D7C6] hover:text-[#c6b393]"
-                : 
-                    "text-[#c6b393] hover:text-[#b8a179]"
+                  ? scroll
+                    ? "text-[#c6b393] hover:text-[#b8a179]"
+                    : "text-[#E1D7C6] hover:text-[#c6b393]"
+                  : "text-[#c6b393] hover:text-[#b8a179]"
               }`}
             ></i>
           </a>
         </li>
-      </ul>
+      </motion.ul>
     </nav>
   );
 }
