@@ -13,10 +13,11 @@ import muse3 from "../images/muse3.jpg";
 import muse4 from "../images/muse4.jpg";
 import muse5 from "../images/muse5.jpg";
 import muse6 from "../images/muse6.jpg";
+import joeHagen from "../images/joehagen.jpeg";
 import inNomineImage from "../images/innomine.jpeg";
 import { ArtistInterface } from "../models/interfaces";
 
-export const lineup: ArtistInterface = {
+export const artistsData: ArtistInterface = {
   1: {
     id: 1,
     name: "The Muse Duo",
@@ -240,5 +241,77 @@ export const lineup: ArtistInterface = {
       </>
     ),
     images: [inNomineImage],
+  },
+  7: {
+    id: 7,
+    name: "Joe Hagen",
+    biography: (
+      <>
+        <div>
+          Joe Hagen is the executive director and a founding member of the Off
+          The Dock Chamber Festival. As a multi-instrumentalist, music producer,
+          composer, and music entrepreneur, Joe is currently based in Los
+          Angeles, CA, running his music production studio Joe Hagen Music, LLC
+          for a number of clients in the classical, pop, and film music genres.
+          He has been creating and producing music for over 15 years and has a
+          deep passion for organizing music events that feature his talented
+          colleagues.
+        </div>
+        <div>
+          Being raised in Skaneateles, NY, he was a frequent concertgoer and
+          volunteer for the world-renowned Skaneateles Festival which sparked
+          his love and passion for classical music. He went on to get his
+          bachelor's degree from the Eastman School of Music in Rochester, NY,
+          studying viola performance with Grammy Award-winning violist Philip
+          Ying (a former Skaneateles Festival Artistic Director), and audio
+          engineering with Grammy award-winning audio engineer Stephen Roessner.
+          He continued to complete his master's degree at Eastman's Beal
+          Institute studying Producing/Composing for Film and Media with
+          internationally recognized jazz composer Dave Rivello, Emmy
+          award-winning film composer Mark Watters, and 6-time Emmy
+          Award-winning film composer Jeff Beal.
+        </div>
+        <div>
+          Since moving to Los Angeles, Joe's recordings, productions, and
+          compositions have been heard over 100 million times. After being used
+          in a Mr. Beast video, Joe's recording and mastering of several
+          classical music favorites for world-famous YouTube personalities and
+          streamers Ludwig and Jschlatt's Music Emporium have accumulated over
+          70 million total plays. These recordings continue to be a source of
+          professional quality copyright-free recordings available for YouTubers
+          and streamers to use in their content for free. His orchestral
+          mini-musicals written for the viral Tik Tok channel "Pixel Playhouse"
+          have been played over 30 million times online and continue to be
+          played nearly 1 million times per month.
+        </div>
+        <div>
+          In collaboration with "Garret's Space," a suicide prevention and
+          mental health center based near Detroit, Michigan, Joe's 24hr live
+          stream music concert series "HS Sessions," was able to raise over
+          $140,000 for the foundation. With this funding, the center was able to
+          purchase a massive new property and wellness center working to reduce
+          suicides and improve mental health in young adults.
+        </div>
+        <div>
+          Joe has composed for, recorded as a viola soloist, mixed, and mastered
+          a feature documentary called A Castle for Kyiv, directed by Madison
+          Kinsella. A Castle for Kyiv follows the story of refugees who were
+          fortunate to escape Ukraine at the advent of the Russian invasion in
+          early 2022 and find refuge in a beautiful Castle in Tuscany, Italy.
+          The documentary will premiere this summer.
+        </div>
+        <div>
+          Joe's life is centered around bringing people together around the
+          creation, love, and culture of beautiful music. Whether he is
+          composing, producing, or performing, Joe's work embodies the power of
+          music, promoting talented artists while serving the many diverse
+          communities in which he is involved. Looking to the future, he plans
+          to continue expanding Off The Dock's reach, promoting even more
+          emerging artists, spreading the love of classical music, and touching
+          the hearts of all who come to listen.
+        </div>
+      </>
+    ),
+    images: [joeHagen],
   },
 };

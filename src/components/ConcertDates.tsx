@@ -1,4 +1,4 @@
-import { events } from "../data/eventData";
+import { eventsData } from "../data/eventsData";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
@@ -8,7 +8,7 @@ const ConcertDates = () => {
     triggerOnce: true,
   });
   const renderEvents = () =>
-    events.map((event) => {
+    eventsData.map((event) => {
       if (inView) {
       }
 

@@ -1,4 +1,4 @@
-import { lineup } from "../data/artistData";
+import { artistsData } from "../data/artistsData";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -6,10 +6,10 @@ import { Autoplay, Navigation } from "swiper";
 import IndividualArtist from "./IndividualArtist";
 
 const Artists = () => {
-  const lineupArr = Object.values(lineup);
+  const artistsArr = Object.values(artistsData);
 
   const renderArtists = () => {
-    return lineupArr.map((artist) => (
+    return artistsArr.map((artist) => (
       <SwiperSlide key={artist.id}>
         <IndividualArtist artist={artist} />
       </SwiperSlide>
@@ -18,7 +18,7 @@ const Artists = () => {
 
   return (
     <section className="performers-section mx-2 md:mx-4 lg:mx-6 md:my-24 my-20 h-224 p-14 flex flex-col gap-14">
-      <h3 className="text-2xl font-bold">SEASON LINEUP</h3>
+      <h3 className="text-2xl font-bold">SEASON LINEUP 2023</h3>
       <Swiper
         loop={true}
         spaceBetween={20}
