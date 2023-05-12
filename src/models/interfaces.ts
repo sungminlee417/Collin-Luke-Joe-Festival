@@ -1,6 +1,7 @@
 export interface Artist {
   id: number;
   name: string;
+  instruments?: string;
   biography: JSX.Element | string;
   images: string[];
 }

@@ -21,6 +21,7 @@ export const artistsData: ArtistInterface = {
   1: {
     id: 1,
     name: "The Muse Duo",
+    instruments: "Guitarist and Pianist",
     biography: (
       <>
         <div>
@@ -55,6 +56,7 @@ export const artistsData: ArtistInterface = {
   2: {
     id: 2,
     name: "Berwick Fiddle Consort",
+    instruments: "Fiddle Consort",
     biography: (
       <>
         <div>
@@ -102,6 +104,7 @@ export const artistsData: ArtistInterface = {
   3: {
     id: 3,
     name: "Natalie Pang",
+    instruments: "Pianist",
     biography: (
       <>
         <div>
@@ -143,6 +146,7 @@ export const artistsData: ArtistInterface = {
   4: {
     id: 4,
     name: "Matthew Payne",
+    instruments: "Baritone",
     biography: (
       <>
         <div>
@@ -194,6 +198,7 @@ export const artistsData: ArtistInterface = {
   5: {
     id: 5,
     name: "Katherine Krebs",
+    instruments: "Soprano",
     biography: (
       <>
         <div>
@@ -245,6 +250,7 @@ export const artistsData: ArtistInterface = {
   7: {
     id: 7,
     name: "Joe Hagen",
+    instruments: "Violist/Composer",
     biography: (
       <>
         <div>

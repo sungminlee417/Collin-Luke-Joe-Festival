@@ -28,7 +28,12 @@ const IndividualArtistModal = ({ artist, onClose }: IndividualArtistProps) => {
           })}
         </ul>
         <div className="basis-2/3 flex flex-col gap-6">
-          <h2 className="text-4xl font-bold">{artist.name}</h2>
+          <h2 className="flex flex-col gap-2 text-4xl">
+            <span className="font-bold">{artist.name}</span>
+            {artist.instruments && (
+              <span className="text-2xl italic"> {artist.instruments}</span>
+            )}
+          </h2>
           <div className="flex flex-col gap-4 text-2xl overflow-auto">
             {artist.biography}
           </div>
