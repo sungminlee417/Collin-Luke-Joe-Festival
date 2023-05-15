@@ -1,3 +1,4 @@
+import { artistsData } from "./artistsData";
 export const eventsData = [
   {
     title: "Vocalists & Soloists",
@@ -9,6 +10,10 @@ export const eventsData = [
     location:
       "First Presbyterian Church of Skaneateles 97 East Genesee Street Skaneateles, NY 13152",
     url: "https://www.eventbrite.com/e/619799867087",
+    artists: {
+      4: artistsData[4],
+      5: artistsData[5],
+    },
   },
   {
     title: "Original Compositions",
@@ -20,6 +25,11 @@ export const eventsData = [
     location:
       "Skaneateles Library 49 East Genesee Street Skaneateles, NY 13152",
     url: "https://www.eventbrite.com/e/619826988207",
+    artists: {
+      1: artistsData[1],
+      4: artistsData[4],
+      7: artistsData[7],
+    },
   },
   {
     title: "Baroque Concert",
@@ -31,6 +41,9 @@ export const eventsData = [
     location:
       "First Presbyterian Church of Skaneateles 97 East Genesee Street Skaneateles, NY 13152",
     url: "https://www.eventbrite.com/e/619829405437",
+    artists: {
+      6: artistsData[6],
+    },
   },
   {
     title: "Jazz and Show Tunes",
@@ -53,6 +66,9 @@ export const eventsData = [
     location:
       "First Presbyterian Church of Skaneateles 97 East Genesee Street Skaneateles, NY 13152",
     url: "https://www.eventbrite.com/e/619832053357",
+    artists: {
+      2: artistsData[2],
+    },
   },
   {
     title: "Potluck",
@@ -75,5 +91,10 @@ export const eventsData = [
     location:
       "First Presbyterian Church of Skaneateles 97 East Genesee Street Skaneateles, NY 13152",
     url: "https://www.eventbrite.com/e/619833688247",
+    artists: {
+      1: artistsData[1],
+      4: artistsData[4],
+      7: artistsData[7],
+    },
   },
 ];

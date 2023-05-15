@@ -1,8 +1,19 @@
 import { IndividualArtistProps } from "../models/interfaces";
 import ArtistImage from "./ArtistImage";
 import { motion } from "framer-motion";
+import { eventsData } from "../data/eventsData";
+import IndividualConcertDate from "./IndividualConcertDate";
 
 const IndividualArtistModal = ({ artist, onClose }: IndividualArtistProps) => {
+  const renderEvents = () => {
+    const filteredEvents = eventsData.filter(
+      (event) => event.artists && artist.id in event.artists
+    );
+
+    return filteredEvents.map((event) => (
+      <IndividualConcertDate key={event.title} event={event} />
+    ));
+  };
   return (
     <>
       <motion.section
@@ -34,8 +45,16 @@ const IndividualArtistModal = ({ artist, onClose }: IndividualArtistProps) => {
               <span className="text-2xl italic"> {artist.instruments}</span>
             )}
           </h2>
-          <div className="flex flex-col gap-4 text-2xl overflow-auto">
-            {artist.biography}
+          <div className="flex flex-col gap-10 overflow-scroll">
+            <div className="flex flex-col gap-4 text-2xl">
+              {artist.biography}
+            </div>
+            {renderEvents() && (
+              <div className="flex flex-col gap-4">
+                <h3 className="text-3xl font-bold">Featured In:</h3>
+                <ul className="flex flex-col gap-4 p-4">{renderEvents()}</ul>
+              </div>
+            )}
           </div>
         </div>
       </motion.section>
