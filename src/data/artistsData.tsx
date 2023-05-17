@@ -15,7 +15,7 @@ import muse5 from "../images/muse5.jpg";
 import muse6 from "../images/muse6.jpg";
 import joeHagen from "../images/joehagen.jpeg";
 import inNomineImage from "../images/innomine.jpeg";
-import samSmithImage1 from "../images/samsmith1.jpeg";
+import samSmith from "../images/sam-smith.jpg";
 import { ArtistInterface } from "../models/interfaces";
 
 export const artistsData: ArtistInterface = {
@@ -340,6 +340,6 @@ export const artistsData: ArtistInterface = {
         Jesus Molina, Aaron Parks, Jazzmeia Horn, and Terri Lyne Carrington.
       </div>
     ),
-    images: [samSmithImage1],
+    images: [samSmith],
   },
 };

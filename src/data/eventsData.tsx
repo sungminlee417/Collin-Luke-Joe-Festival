@@ -46,6 +46,17 @@ export const eventsData = [
     },
   },
   {
+    title: "Jazz and Show Tunes",
+    date: {
+      day: 8,
+      month: "July",
+    },
+    time: "1:00pm-2:30pm",
+    location:
+      "First Presbyterian Church of Skaneateles 97 East Genesee Street Skaneateles, NY 13152",
+    url: "https://www.eventbrite.com/e/619830759487",
+  },
+  {
     title: "Baroque Concert",
     date: {
       day: 8,
@@ -58,17 +69,6 @@ export const eventsData = [
     artists: {
       6: artistsData[6],
     },
-  },
-  {
-    title: "Jazz and Show Tunes",
-    date: {
-      day: 8,
-      month: "July",
-    },
-    time: "1:00pm-2:30pm",
-    location:
-      "First Presbyterian Church of Skaneateles 97 East Genesee Street Skaneateles, NY 13152",
-    url: "https://www.eventbrite.com/e/619830759487",
   },
   {
     title: "Potluck",
