@@ -12,6 +12,12 @@ interface IndividualConcertDateProps {
 }
 
 const IndividualConcertDate = ({ event }: IndividualConcertDateProps) => {
+  const openMap = (address: string): void => {
+    window.open(
+      `https://maps.google.com/maps?q=${encodeURIComponent(address)}`
+    );
+  };
+
   return (
     <li
       key={event.title}
@@ -31,7 +37,12 @@ const IndividualConcertDate = ({ event }: IndividualConcertDateProps) => {
             </div>
             <div className="flex items-center gap-2">
               <i className="fas fa-map-marker-alt"></i>
-              <div className="font">{event.location}</div>
+              <div
+                className="underline decoration-dotted underline-offset-2 cursor-pointer"
+                onClick={() => openMap(event.location)}
+              >
+                {event.location}
+              </div>
             </div>
           </div>
         </div>
