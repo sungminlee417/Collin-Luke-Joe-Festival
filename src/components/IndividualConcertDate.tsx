@@ -1,3 +1,5 @@
+import { Tooltip } from "@chakra-ui/react";
+
 interface IndividualConcertDateProps {
   event: {
     title: string;
@@ -48,14 +50,23 @@ const IndividualConcertDate = ({ event }: IndividualConcertDateProps) => {
         </div>
       </div>
       <div className="flex justify-between md:justify-center items-center mt-4 md:mt-0 lg:ml-auto">
-        <a
-          href={event.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex justify-center items-center w px-8 py-4 rounded-md bg-[#579BB1] text-white text-xl font-bold hover:bg-[#4e8b9f] transition"
+        <Tooltip
+          label="Concert Ticket Prices: $25 and Season Pass: $75"
+          placement="top"
+          hasArrow
+          rounded={"md"}
+          fontSize={"lg"}
+          padding={"4"}
         >
-          Tickets
-        </a>
+          <a
+            href={event.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex justify-center items-center w px-8 py-4 rounded-md bg-[#579BB1] text-white text-xl font-bold hover:bg-[#4e8b9f] transition"
+          >
+            Tickets
+          </a>
+        </Tooltip>
       </div>
     </li>
   );
