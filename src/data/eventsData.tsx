@@ -23,7 +23,7 @@ export const eventsData = [
     },
     time: "1:00pm-2:30pm",
     location:
-      "Skaneateles Library 49 East Genesee Street Skaneateles, NY 13152",
+      "First Presbyterian Church of Skaneateles 97 East Genesee Street Skaneateles, NY 13152",
     url: "https://www.eventbrite.com/e/619826988207",
     artists: {
       1: artistsData[1],
@@ -32,12 +32,26 @@ export const eventsData = [
     },
   },
   {
-    title: "Baroque Concert",
+    title: "Folk and Fiddle",
     date: {
       day: 7,
       month: "July",
     },
-    time: "8:00pm",
+    time: "8:00pm-9:30pm",
+    location:
+      "First Presbyterian Church of Skaneateles 97 East Genesee Street Skaneateles, NY 13152",
+    url: "https://www.eventbrite.com/e/619832053357",
+    artists: {
+      2: artistsData[2],
+    },
+  },
+  {
+    title: "Baroque Concert",
+    date: {
+      day: 8,
+      month: "July",
+    },
+    time: "8:00pm-9:30pm",
     location:
       "First Presbyterian Church of Skaneateles 97 East Genesee Street Skaneateles, NY 13152",
     url: "https://www.eventbrite.com/e/619829405437",
@@ -53,22 +67,8 @@ export const eventsData = [
     },
     time: "1:00pm-2:30pm",
     location:
-      "Skaneateles Library 49 East Genesee Street Skaneateles, NY 13152",
-    url: "https://www.eventbrite.com/e/619830759487",
-  },
-  {
-    title: "Folk and Fiddle",
-    date: {
-      day: 8,
-      month: "July",
-    },
-    time: "8:00pm",
-    location:
       "First Presbyterian Church of Skaneateles 97 East Genesee Street Skaneateles, NY 13152",
-    url: "https://www.eventbrite.com/e/619832053357",
-    artists: {
-      2: artistsData[2],
-    },
+    url: "https://www.eventbrite.com/e/619830759487",
   },
   {
     title: "Potluck",
@@ -87,7 +87,7 @@ export const eventsData = [
       day: 9,
       month: "July",
     },
-    time: "7:00pm",
+    time: "7:00pm-8:30pm",
     location:
       "First Presbyterian Church of Skaneateles 97 East Genesee Street Skaneateles, NY 13152",
     url: "https://www.eventbrite.com/e/619833688247",

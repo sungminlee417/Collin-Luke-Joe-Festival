@@ -15,6 +15,7 @@ import muse5 from "../images/muse5.jpg";
 import muse6 from "../images/muse6.jpg";
 import joeHagen from "../images/joehagen.jpeg";
 import inNomineImage from "../images/innomine.jpeg";
+import samSmithImage1 from "../images/samsmith1.jpeg";
 import { ArtistInterface } from "../models/interfaces";
 
 export const artistsData: ArtistInterface = {
@@ -319,5 +320,26 @@ export const artistsData: ArtistInterface = {
       </>
     ),
     images: [joeHagen],
+  },
+  8: {
+    id: 8,
+    name: "Sam Smith",
+    biography: (
+      <div>
+        Samuel Smith is a composer, arranger, and a very sought after bassist
+        based in Boston, MA. He has gained such an insight on the bass that the
+        AuburnPub said that "watching Smith play, the line between bassist and
+        bass blurs." The young bassist looks to always improve himself as an
+        individual musician, as well as with the music that is brought to him by
+        other artists. Smith constantly plays local in the Greater Boston area,
+        and has brought his expertise around the world from the USA to China,
+        playing as a sideman and bandleader for many musical projects. The
+        bassist has played at esteemed venues such as Dizzy's Club, Wally's Cafe
+        Jazz Club, and Smalls Jazz Club and has played and/or recorded with the
+        likes of Cassandra Wilson, Ron Blake, Stefon Harris, Joe Magnarelli,
+        Jesus Molina, Aaron Parks, Jazzmeia Horn, and Terri Lyne Carrington.
+      </div>
+    ),
+    images: [samSmithImage1],
   },
 };

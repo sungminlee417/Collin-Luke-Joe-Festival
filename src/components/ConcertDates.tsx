@@ -17,9 +17,7 @@ const ConcertDates = () => {
             purchase tickets.
           </p>
         </div>
-        <ul className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
-          {renderEvents()}
-        </ul>
+        <ul className="mt-16 flex flex-col gap-8">{renderEvents()}</ul>
       </div>
     </section>
   );

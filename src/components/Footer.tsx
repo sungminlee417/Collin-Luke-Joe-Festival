@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="bg-gray-800 text-white">
       <div className="container mx-auto py-10 px-4 flex items-center justify-between">
         <a
-          className="flex items-center o"
+          className="flex items-center"
           href="https://instagram.com/offthedockchamber?igshid=NTc4MTIwNjQ2YQ=="
           target="_blank"
           rel="noopener noreferrer"

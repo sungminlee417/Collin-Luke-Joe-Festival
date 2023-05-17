@@ -14,6 +14,7 @@ const IndividualArtistModal = ({ artist, onClose }: IndividualArtistProps) => {
       <IndividualConcertDate key={event.title} event={event} />
     ));
   };
+
   return (
     <>
       <motion.section
@@ -49,7 +50,7 @@ const IndividualArtistModal = ({ artist, onClose }: IndividualArtistProps) => {
             <div className="flex flex-col gap-4 text-2xl">
               {artist.biography}
             </div>
-            {renderEvents() && (
+            {renderEvents().length > 0 && (
               <div className="flex flex-col gap-4">
                 <h3 className="text-3xl font-bold">Featured In:</h3>
                 <ul className="flex flex-col gap-4 p-4">{renderEvents()}</ul>
