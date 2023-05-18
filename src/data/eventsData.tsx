@@ -27,6 +27,7 @@ export const eventsData = [
     url: "https://www.eventbrite.com/e/619826988207",
     artists: {
       1: artistsData[1],
+      3: artistsData[3],
       7: artistsData[7],
     },
   },
@@ -54,6 +55,9 @@ export const eventsData = [
     location:
       "First Presbyterian Church of Skaneateles 97 East Genesee Street Skaneateles, NY 13152",
     url: "https://www.eventbrite.com/e/619830759487",
+    artists: {
+      8: artistsData[8],
+    },
   },
   {
     title: "Baroque Mosaics",
@@ -79,6 +83,9 @@ export const eventsData = [
     location:
       "First Presbyterian Church of Skaneateles: Dining Hall 97 East Genesee Street Skaneateles, NY 13152",
     url: "https://www.eventbrite.com/e/619836245897",
+    artists: {
+      8: artistsData[8],
+    },
   },
   {
     title: "Season Finale: Harmonious Duos!",
@@ -92,6 +99,7 @@ export const eventsData = [
     url: "https://www.eventbrite.com/e/619833688247",
     artists: {
       1: artistsData[1],
+      3: artistsData[3],
       7: artistsData[7],
     },
   },
