@@ -1,5 +1,6 @@
 import { eventsData } from "../data/eventsData";
 import IndividualConcertDate from "./IndividualConcertDate";
+import SeasonPassCard from "./SeasonPassCard";
 
 const ConcertDates = () => {
   const renderEvents = () =>
@@ -17,7 +18,10 @@ const ConcertDates = () => {
             purchase tickets.
           </p>
         </div>
-        <ul className="mt-16 flex flex-col gap-8">{renderEvents()}</ul>
+        <ul className="mt-16 flex flex-col gap-8">
+          <SeasonPassCard />
+          {renderEvents()}
+        </ul>
       </div>
     </section>
   );
