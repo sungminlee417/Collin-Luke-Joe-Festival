@@ -1,7 +1,7 @@
 import { artistsData } from "./artistsData";
 export const eventsData = [
   {
-    title: "Vocalists & Soloists",
+    title: "Voices of Passion",
     date: {
       day: 6,
       month: "July",
@@ -16,7 +16,7 @@ export const eventsData = [
     },
   },
   {
-    title: "Original Compositions",
+    title: "The Art of Composition",
     date: {
       day: 7,
       month: "July",
@@ -27,7 +27,6 @@ export const eventsData = [
     url: "https://www.eventbrite.com/e/619826988207",
     artists: {
       1: artistsData[1],
-      4: artistsData[4],
       7: artistsData[7],
     },
   },
@@ -46,7 +45,7 @@ export const eventsData = [
     },
   },
   {
-    title: "Jazz and Show Tunes",
+    title: "An Afternoon of Jazz and Show Tunes",
     date: {
       day: 8,
       month: "July",
@@ -57,7 +56,7 @@ export const eventsData = [
     url: "https://www.eventbrite.com/e/619830759487",
   },
   {
-    title: "Baroque Concert",
+    title: "Baroque Mosaics",
     date: {
       day: 8,
       month: "July",
@@ -71,7 +70,7 @@ export const eventsData = [
     },
   },
   {
-    title: "Potluck",
+    title: "Community Potluck",
     date: {
       day: 9,
       month: "July",
@@ -82,7 +81,7 @@ export const eventsData = [
     url: "https://www.eventbrite.com/e/619836245897",
   },
   {
-    title: "Duo Concert",
+    title: "Season Finale: Harmonious Duos!",
     date: {
       day: 9,
       month: "July",
@@ -93,7 +92,6 @@ export const eventsData = [
     url: "https://www.eventbrite.com/e/619833688247",
     artists: {
       1: artistsData[1],
-      4: artistsData[4],
       7: artistsData[7],
     },
   },
