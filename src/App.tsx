@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import ConcertDates from "./components/ConcertDates";
 import About from "./components/About";
 import NotFound from "./components/NotFound";
+import Trailer from "./components/Trailer";
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
             element={
               <>
                 <LandingPage />
+                {/* <Trailer /> */}
                 <Artists />
                 <ConcertDates />
                 <Contact />
