@@ -25,12 +25,12 @@ const Trailer = () => {
               Join Off The Dock, 2023!
             </h2>
 
-            <p className="mt-4 text-gray-600 text-2xl">
+            {/* <p className="mt-4 text-gray-600 text-2xl">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut qui
               hic atque tenetur quis eius quos ea neque sunt, accusantium soluta
               minus veniam tempora deserunt? Molestiae eius quidem quam
               repellat.
-            </p>
+            </p> */}
 
             <div className="mt-10 flex flex-col gap-6 md:flex-row">
               <button

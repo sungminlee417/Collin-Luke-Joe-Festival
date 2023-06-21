@@ -21,7 +21,7 @@ const App = () => {
             element={
               <>
                 <LandingPage />
-                {/* <Trailer /> */}
+                <Trailer />
                 <Artists />
                 <ConcertDates />
                 <Contact />
