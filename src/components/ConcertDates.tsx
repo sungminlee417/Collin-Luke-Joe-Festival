@@ -12,8 +12,8 @@ const ConcertDates = () => {
     <section className="concert-calendar-section bg-[#F8F4EA] py-24">
       <div className="container mx-auto">
         <div className="text-center">
-          <h2 className="text-4xl font-bold mb-4">Upcoming Concert Dates</h2>
-          <p className="text-lg text-gray-700">
+          <h2 className="text-3xl font-bold mb-4">Upcoming Concert Dates</h2>
+          <p className="text-sm text-gray-700">
             Check out our upcoming concerts and events. Click on "Tickets" to
             purchase tickets.
           </p>

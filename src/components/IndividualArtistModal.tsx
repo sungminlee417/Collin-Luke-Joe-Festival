@@ -18,7 +18,7 @@ const IndividualArtistModal = ({ artist, onClose }: IndividualArtistProps) => {
   return (
     <>
       <motion.section
-        className="flex md:flex-row flex-col bg-white p-10 gap-10 md:h-208 h-240 lg:w-336 md:w-272 md:m-0 m-10 rounded-md overflow-auto"
+        className="flex md:flex-row flex-col bg-white p-10 gap-10 md:h-160 h-140 lg:w-288 md:w-240 md:m-0 m-10 rounded-md overflow-auto"
         initial={{ opacity: 0, y: "-100vh" }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: "100vh" }}
@@ -40,14 +40,14 @@ const IndividualArtistModal = ({ artist, onClose }: IndividualArtistProps) => {
           })}
         </ul>
         <div className="basis-2/3 flex flex-col gap-6">
-          <h2 className="flex flex-col gap-2 text-4xl">
+          <h2 className="flex flex-col gap-2 text-3xl">
             <span className="font-bold">{artist.name}</span>
             {artist.instruments && (
-              <span className="text-2xl italic"> {artist.instruments}</span>
+              <span className="text-xl italic"> {artist.instruments}</span>
             )}
           </h2>
           <div className="flex flex-col gap-10 overflow-scroll">
-            <div className="flex flex-col gap-4 text-2xl">
+            <div className="flex flex-col gap-4 text-md">
               {artist.biography}
             </div>
             {renderEvents().length > 0 && (

@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Navigation from "./components/Navigation";
-import LandingPage from "./components/LandingPage";
+import Hero from "./components/Hero";
 import Artists from "./components/Artists";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -9,6 +9,7 @@ import ConcertDates from "./components/ConcertDates";
 import About from "./components/About";
 import NotFound from "./components/NotFound";
 import Trailer from "./components/Trailer";
+import PastSeasons from "./components/PastSeasons";
 
 const App = () => {
   return (
@@ -20,7 +21,7 @@ const App = () => {
             path="/"
             element={
               <>
-                <LandingPage />
+                <Hero />
                 <Trailer />
                 <Artists />
                 <ConcertDates />
@@ -29,6 +30,7 @@ const App = () => {
             }
           />
           <Route path="/about" element={<About />} />
+          <Route path="/past-seasons" element={<PastSeasons />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>

@@ -4,7 +4,7 @@ import backgroundImage from "../images/sample_landing_page.jpg";
 import landingPageLogoWhite from "../images/landing-logo-white.png";
 import { motion } from "framer-motion";
 
-const LandingPage = () => {
+const Hero = () => {
   const [title] = useState("Off The Dock Chamber Festival");
   const [description] = useState(
     "An inspiring modern platform for emerging classical artists."
@@ -48,24 +48,24 @@ const LandingPage = () => {
             className="flex flex-col items-center gap-4"
           >
             <motion.img
-              className="w-5/6 max-w-lg"
+              className="w-4/6 max-w-lg"
               src={landingPageLogoWhite}
               alt="Off The Dock Chamber Festival logo"
             />
-            <motion.div className="text-xl lg:text-2xl text-white italic self-end">
+            {/* <motion.div className="text-xl lg:text-2xl text-white italic self-end">
               {date} Season
-            </motion.div>
+            </motion.div> */}
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 2 }}
-            className="landing-desc text-white mt-8 text-2xl lg:text-4xl font-serif leading-relaxed max-w-4xl text-center"
+            className="landing-desc text-white mt-8 text-2xl font-serif leading-relaxed max-w-4xl text-center"
           >
             <strong className="text-[#E1D7C6]">{title}</strong>
             <br />
             <p className="italic">{description}</p>
-            <p className="mt-4">
+            <p className="mt-2">
               Experience the power of modern classical music.
             </p>
           </motion.div>
@@ -73,7 +73,7 @@ const LandingPage = () => {
             whileHover="hover"
             variants={buttonVariants}
             onClick={scrollTo}
-            className="bg-[#579BB1] hover:bg-[#4e8b9f] text-white py-3 px-6 rounded-full mt-8 font-semibold text-xl"
+            className="bg-[#579BB1] hover:bg-[#4e8b9f] text-white py-2 px-5 rounded-full mt-8 font-semibold text-sm"
           >
             Join the festival
           </motion.button>
@@ -83,4 +83,4 @@ const LandingPage = () => {
   );
 };
 
-export default LandingPage;
+export default Hero;

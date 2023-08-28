@@ -18,7 +18,7 @@ const IndividualArtist = ({ artist }: IndividualArtistProps) => {
           className="h-full w-full object-cover rounded-md hover:opacity-60 transition peer"
           alt={artist.name}
         />
-        <div className="absolute lg:text-5xl text-3xl top-1/2 left-1/2 -translate-x-1/2 w-96 text-center text-white peer-hover:-translate-y-1/2 peer-hover:opacity-100 translate-y-20 transition opacity-0 duration-300 pointer-events-none">
+        <div className="absolute text-3xl top-1/2 left-1/2 -translate-x-1/2 w-96 text-center text-white peer-hover:-translate-y-1/2 peer-hover:opacity-100 translate-y-20 transition opacity-0 duration-300 pointer-events-none">
           {artist.name}
         </div>
       </button>
