@@ -40,16 +40,16 @@ const Hero = () => {
 
             <div className="mt-8 flex flex-wrap justify-center gap-4">
               <a
-                className="block w-full rounded bg-[#579BB1] px-12 py-3 text-sm font-medium text-white shadow hover:bg-[#4e8b9f] focus:outline-none focus:ring active:bg-[#75AFC1] sm:w-auto"
+                className="block w-full rounded bg-[#579BB1] px-12 py-3 text-sm font-medium text-white shadow hover:bg-[#4e8b9f] focus:outline-none active:bg-[#75AFC1] sm:w-auto"
                 href="https://www.gofundme.com/f/support-a-festival-for-emerging-classical-artists?member=26590045&utm_campaign=p_cp+share-sheet&utm_content=undefined&utm_medium=copy_link_all&utm_source=customer&utm_term=undefined"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                Donate
+                Support Us
               </a>
 
               <button
-                className="block bg-white text-gray-700 w-full rounded px-12 py-3 text-sm font-medium shadow focus:outline-none focus:ring active:text-gray-500 sm:w-auto"
+                className="block bg-white text-gray-700 w-full rounded px-12 py-3 text-sm font-medium shadow focus:outline-none active:text-gray-500 sm:w-auto"
                 onClick={scrollTo}
               >
                 Join Festival

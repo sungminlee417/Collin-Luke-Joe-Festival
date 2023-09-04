@@ -2,14 +2,14 @@ import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Navigation from "./components/Navigation";
 import Hero from "./components/Hero";
+import About from "./components/About";
 import Artists from "./components/Artists";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import ConcertDates from "./components/ConcertDates";
-import About from "./components/About";
 import NotFound from "./components/NotFound";
-import Trailer from "./components/Trailer";
 import PastSeasons from "./components/PastSeasons";
+import Staff from "./components/Staff";
 
 const App = () => {
   return (
@@ -22,14 +22,15 @@ const App = () => {
             element={
               <>
                 <Hero />
-                <Trailer />
-                <Artists />
-                <ConcertDates />
+                <About />
+                <Staff />
+                {/* <Artists /> */}
+                {/* <ConcertDates /> */}
                 <Contact />
               </>
             }
           />
-          <Route path="/about" element={<About />} />
+          {/* <Route path="/about" element={<About />} /> */}
           <Route path="/past-seasons" element={<PastSeasons />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

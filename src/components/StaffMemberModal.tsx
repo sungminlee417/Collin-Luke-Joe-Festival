@@ -32,12 +32,12 @@ const StaffMemberModal: React.FC<StaffMemberModalProps> = ({
       </div>
       <div className="px-6 py-4">
         <div className="mb-8">
-          <h2 className="text-4xl font-bold">{member.name}</h2>
-          <p className="text-xl text-gray-600">{member.role}</p>
+          <h2 className="text-2xl font-bold">{member.name}</h2>
+          <p className="text-md text-gray-600">{member.role}</p>
         </div>
         {member.bio && (
           <div
-            className="text-2xl text-gray-700 flex flex-col gap-6"
+            className="text-md text-gray-700 flex flex-col gap-6"
             style={{ maxHeight: "50vh", overflowY: "auto" }}
           >
             {member.bio}
@@ -46,7 +46,7 @@ const StaffMemberModal: React.FC<StaffMemberModalProps> = ({
       </div>
       <div className="px-6 py-4">
         <button
-          className="bg-[#579BB1] hover:bg-[#4e8b9f] text-white font-bold py-4 px-8 rounded text-2xl"
+          className="bg-[#579BB1] hover:bg-[#4e8b9f] text-white font-bold py-2 px-6 rounded text-lg"
           onClick={onClose}
         >
           Close
