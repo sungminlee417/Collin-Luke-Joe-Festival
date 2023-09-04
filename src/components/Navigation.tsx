@@ -127,7 +127,7 @@ function Navigation() {
                   : "text-[#c6b393] hover:text-[#b8a179]"
               }`}
             >
-              ABOUT US
+              ABOUT
             </span>
             <i
               className={`block lg:hidden text-4xl fa-solid fa-circle-info ${

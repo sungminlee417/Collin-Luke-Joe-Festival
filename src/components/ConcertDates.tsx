@@ -19,7 +19,7 @@ const ConcertDates = () => {
           </p>
         </div>
         <ul className="mt-16 flex flex-col gap-8">
-          <SeasonPassCard />
+          {/* <SeasonPassCard /> */}
           {renderEvents()}
         </ul>
       </div>

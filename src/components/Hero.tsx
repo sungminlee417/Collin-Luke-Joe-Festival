@@ -5,20 +5,9 @@ import landingPageLogoWhite from "../images/landing-logo-white.png";
 import { motion } from "framer-motion";
 
 const Hero = () => {
-  const [title] = useState("Off The Dock Chamber Festival");
   const [description] = useState(
     "An inspiring modern platform for emerging classical artists."
   );
-  const [date] = useState(new Date().getFullYear());
-
-  const buttonVariants = {
-    hover: {
-      y: -5,
-      transition: {
-        duration: 0.2,
-      },
-    },
-  };
 
   function scrollTo(): void {
     const element = document.querySelector(".concert-calendar-section")!;
@@ -29,57 +18,47 @@ const Hero = () => {
   }
 
   return (
-    <Parallax
-      bgImage={backgroundImage}
-      strength={500}
-      bgImageStyle={{ objectFit: "cover", backgroundPosition: "50% 50%" }}
-    >
-      <div className="landingpage-section h-screen relative">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="title absolute flex flex-col items-center justify-center h-full p-4 w-full"
-        >
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.5 }}
-            className="flex flex-col items-center gap-4"
-          >
-            <motion.img
-              className="w-4/6 max-w-lg"
-              src={landingPageLogoWhite}
-              alt="Off The Dock Chamber Festival logo"
-            />
-            {/* <motion.div className="text-xl lg:text-2xl text-white italic self-end">
-              {date} Season
-            </motion.div> */}
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 2 }}
-            className="landing-desc text-white mt-8 text-2xl font-serif leading-relaxed max-w-4xl text-center"
-          >
-            <strong className="text-[#E1D7C6]">{title}</strong>
-            <br />
-            <p className="italic">{description}</p>
-            <p className="mt-2">
-              Experience the power of modern classical music.
-            </p>
-          </motion.div>
-          <motion.button
-            whileHover="hover"
-            variants={buttonVariants}
-            onClick={scrollTo}
-            className="bg-[#579BB1] hover:bg-[#4e8b9f] text-white py-2 px-5 rounded-full mt-8 font-semibold text-sm"
-          >
-            Join the festival
-          </motion.button>
-        </motion.div>
-      </div>
-    </Parallax>
+    <section className="landingpage-section">
+      <Parallax
+        bgImage={backgroundImage}
+        strength={500}
+        bgImageStyle={{ objectFit: "cover", backgroundPosition: "50% 50%" }}
+      >
+        <div className="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center">
+          <div className="mx-auto max-w-xl text-center">
+            <h1 className="text-3xl font-extrabold sm:text-5xl">
+              <motion.img
+                className="w-4/6 max-w-lg mx-auto"
+                src={landingPageLogoWhite}
+                alt="Off The Dock Chamber Festival logo"
+              />
+            </h1>
+            <div className="mt-4 sm:text-xl/relaxed text-white italic text-shadow-lg shadow-black">
+              <p>Experience the power of modern classical music.</p>
+              <p>{description}</p>
+            </div>
+
+            <div className="mt-8 flex flex-wrap justify-center gap-4">
+              <a
+                className="block w-full rounded bg-[#579BB1] px-12 py-3 text-sm font-medium text-white shadow hover:bg-[#4e8b9f] focus:outline-none focus:ring active:bg-[#75AFC1] sm:w-auto"
+                href="https://www.gofundme.com/f/support-a-festival-for-emerging-classical-artists?member=26590045&utm_campaign=p_cp+share-sheet&utm_content=undefined&utm_medium=copy_link_all&utm_source=customer&utm_term=undefined"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Donate
+              </a>
+
+              <button
+                className="block bg-white text-gray-700 w-full rounded px-12 py-3 text-sm font-medium shadow focus:outline-none focus:ring active:text-gray-500 sm:w-auto"
+                onClick={scrollTo}
+              >
+                Join Festival
+              </button>
+            </div>
+          </div>
+        </div>
+      </Parallax>
+    </section>
   );
 };
 
