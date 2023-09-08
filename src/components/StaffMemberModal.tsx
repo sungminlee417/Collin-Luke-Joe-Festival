@@ -21,7 +21,7 @@ const StaffMemberModal: React.FC<StaffMemberModalProps> = ({
       initial={{ opacity: 0, y: "-100vh" }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: "100vh" }}
-      style={{ maxHeight: "90vh" }} // set a max-height for the modal
+      style={{ maxHeight: "90vh" }}
     >
       <div className="relative pb-1/2">
         <img

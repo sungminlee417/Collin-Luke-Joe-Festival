@@ -1,9 +1,9 @@
 import { render, screen } from "@testing-library/react";
-import About from "./Staff";
+import Staff from "./Staff";
 
-describe("About component", () => {
+describe("Staff component", () => {
   test("should render staff members", () => {
-    render(<About />);
+    render(<Staff />);
 
     expect(screen.getByText("Joe Hagen")).toBeInTheDocument();
     expect(screen.getByText("Natalie Pang")).toBeInTheDocument();

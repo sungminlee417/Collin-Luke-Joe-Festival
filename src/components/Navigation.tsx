@@ -6,12 +6,13 @@ import horizontalLogoWhite from "../images/horizontal-logo-white.png";
 import navLogo from "../images/nav-logo.png";
 import navLogoWhite from "../images/nav-logo-white.png";
 import { motion } from "framer-motion";
-import DropDownMenu from "../ui/DropDownMenu";
 
 function Navigation() {
   const [scroll, setScroll] = useState(false);
   const navigate = useNavigate();
   const match = useMatch("/");
+
+  console.log(match);
 
   useEffect(() => {
     const landingPageEl = document.querySelector(`.landingpage-section`);
@@ -62,7 +63,7 @@ function Navigation() {
 
   return (
     <nav
-      className={`navigation fixed flex justify-between w-full py-8 px-10 md:px-14 lg:px-28 font-bold md:text-md font-source transition z-10 ${
+      className={`navigation fixed flex justify-between w-full py-6 px-6 md:px-14 lg:px-28 font-bold md:text-md font-source transition z-10 ${
         scroll ? "bg-white shadow-md text-[#ABC4AA]" : "text-[#AEBDCA]"
       }`}
     >
@@ -103,7 +104,7 @@ function Navigation() {
         </button>
       </motion.div>
       <motion.ul
-        className="flex gap-10 md:gap-14 lg:ml-auto"
+        className="flex gap-6 md:gap-14 lg:ml-auto"
         transition={{
           type: "spring",
           duration: 0.5,
@@ -117,9 +118,9 @@ function Navigation() {
         animate={{ x: 0, opacity: 1 }}
       >
         <li>
-          <NavLink to="/about">
-            <span
-              className={`hidden lg:block transition-all duration-300 ${
+          <div className="flex overflow-hidden gap-1">
+            <div
+              className={`text-md hidden lg:block transition-all duration-300 group drop-down-button ${
                 match
                   ? scroll
                     ? "text-[#c6b393] hover:text-[#b8a179]"
@@ -127,10 +128,10 @@ function Navigation() {
                   : "text-[#c6b393] hover:text-[#b8a179]"
               }`}
             >
-              ABOUT
-            </span>
+              PAST SEASONS
+            </div>
             <i
-              className={`block lg:hidden text-4xl fa-solid fa-circle-info ${
+              className={`block lg:hidden text-4xl fa-solid fa-circle-dollar-to-slot fa-solid fa-music ${
                 match
                   ? scroll
                     ? "text-[#c6b393] hover:text-[#b8a179]"
@@ -138,10 +139,7 @@ function Navigation() {
                   : "text-[#c6b393] hover:text-[#b8a179]"
               }`}
             ></i>
-          </NavLink>
-        </li>
-        <li>
-          <DropDownMenu scroll={scroll} />
+          </div>
         </li>
         <li>
           <a

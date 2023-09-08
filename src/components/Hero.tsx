@@ -49,7 +49,7 @@ const Hero = () => {
               </a>
 
               <button
-                className="block bg-white text-gray-700 w-full rounded px-12 py-3 text-sm font-medium shadow focus:outline-none active:text-gray-500 sm:w-auto"
+                className="block bg-white text-gray-800 w-full rounded px-12 py-3 text-sm font-medium shadow focus:outline-none active:text-gray-600 sm:w-auto"
                 onClick={scrollTo}
               >
                 Join Festival

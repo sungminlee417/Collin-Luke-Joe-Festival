@@ -12,7 +12,7 @@ const Staff = () => {
           </h2>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-6 md:gap-12 lg:gap-20 mt-16">
+        <div className="flex flex-wrap justify-center gap-10 md:gap-12 lg:gap-20 mt-20">
           {staffData.map((member) => (
             <StaffMember member={member} key={member.id} />
           ))}
