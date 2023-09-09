@@ -50,6 +50,12 @@ function Navigation() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const navButtonStyle = match
+    ? scroll
+      ? "text-[#c6b393] hover:text-[#b8a179]"
+      : "text-[#E1D7C6] hover:text-[#c6b393]"
+    : "text-[#c6b393] hover:text-[#b8a179]";
+
   function scrollTo(className: string): void {
     navigate("/");
     setTimeout(() => {
@@ -99,7 +105,7 @@ function Navigation() {
           <img
             src={match ? (scroll ? navLogo : navLogoWhite) : navLogo}
             alt="Logo"
-            className="block h-14 lg:hidden object-contain text-4xl"
+            className="block h-10 lg:hidden object-contain text-3xl"
           />
         </button>
       </motion.div>
@@ -120,24 +126,12 @@ function Navigation() {
         <li>
           <div className="flex overflow-hidden gap-1">
             <div
-              className={`text-md hidden lg:block transition-all duration-300 group drop-down-button ${
-                match
-                  ? scroll
-                    ? "text-[#c6b393] hover:text-[#b8a179]"
-                    : "text-[#E1D7C6] hover:text-[#c6b393]"
-                  : "text-[#c6b393] hover:text-[#b8a179]"
-              }`}
+              className={`text-md hidden lg:block transition-all duration-300 group drop-down-button ${navButtonStyle} cursor-pointer`}
             >
               PAST SEASONS
             </div>
             <i
-              className={`block lg:hidden text-4xl fa-solid fa-circle-dollar-to-slot fa-solid fa-music ${
-                match
-                  ? scroll
-                    ? "text-[#c6b393] hover:text-[#b8a179]"
-                    : "text-[#E1D7C6] hover:text-[#c6b393]"
-                  : "text-[#c6b393] hover:text-[#b8a179]"
-              }`}
+              className={`block lg:hidden text-3xl fa-solid fa-circle-dollar-to-slot fa-solid fa-music ${navButtonStyle}`}
             ></i>
           </div>
         </li>
@@ -148,24 +142,12 @@ function Navigation() {
             rel="noopener noreferrer"
           >
             <span
-              className={`hidden lg:block transition-all duration-300 ${
-                match
-                  ? scroll
-                    ? "text-[#c6b393] hover:text-[#b8a179]"
-                    : "text-[#E1D7C6] hover:text-[#c6b393]"
-                  : "text-[#c6b393] hover:text-[#b8a179]"
-              }`}
+              className={`hidden lg:block transition-all duration-300 ${navButtonStyle}`}
             >
               DONATE
             </span>
             <i
-              className={`block lg:hidden text-4xl fa-solid fa-circle-dollar-to-slot ${
-                match
-                  ? scroll
-                    ? "text-[#c6b393] hover:text-[#b8a179]"
-                    : "text-[#E1D7C6] hover:text-[#c6b393]"
-                  : "text-[#c6b393] hover:text-[#b8a179]"
-              }`}
+              className={`block lg:hidden text-3xl fa-solid fa-circle-dollar-to-slot ${navButtonStyle}`}
             ></i>
           </a>
         </li>
