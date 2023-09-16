@@ -11,8 +11,19 @@ function Navigation() {
   const [scroll, setScroll] = useState(false);
   const navigate = useNavigate();
   const match = useMatch("/");
+  const [showPastSeasonsMenu, setShowPastSeasonsMenu] = useState(false);
 
-  console.log(match);
+  useEffect(() => {
+    if (!showPastSeasonsMenu) return;
+
+    const closeMenu = () => {
+      setShowPastSeasonsMenu(false);
+    };
+
+    document.addEventListener("click", closeMenu);
+
+    return () => document.removeEventListener("click", closeMenu);
+  }, [showPastSeasonsMenu]);
 
   useEffect(() => {
     const landingPageEl = document.querySelector(`.landingpage-section`);
@@ -124,30 +135,34 @@ function Navigation() {
         animate={{ x: 0, opacity: 1 }}
       >
         <li>
-          <div className="flex gap-1">
-            <div
-              className={`text-md hidden lg:block transition-all duration-300 group drop-down-button ${navButtonStyle} cursor-pointer`}
-            >
-              PAST SEASONS
-            </div>
-            <i
-              className={`block lg:hidden text-2xl fa-solid fa-circle-dollar-to-slot fa-solid fa-music ${navButtonStyle}`}
-            ></i>
-            <div className="relative">
-
+          <div
+            className="flex gap-1 relative"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button onClick={() => setShowPastSeasonsMenu((prev) => !prev)}>
               <div
-                className="absolute top-6 end-0 z-10 mt-2 w-56 rounded-md border border-gray-100 bg-white shadow-lg"
-                role="menu"
+                className={`text-md hidden lg:block transition-all duration-300 ${navButtonStyle} cursor-pointer`}
               >
-                <div className="p-2">
-                  <a
-                    href="#"
-                    className="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700"
-                    role="menuitem"
-                  >
-                    2023 Season
-                  </a>
-                </div>
+                PAST SEASONS
+              </div>
+              <i
+                className={`block lg:hidden text-2xl fa-solid fa-circle-dollar-to-slot fa-solid fa-music ${navButtonStyle}`}
+              />
+            </button>
+            <div
+              className={`${
+                showPastSeasonsMenu ? "opacity-100" : "opacity-0"
+              } transition poin absolute top-8 end-0 z-10 mt-2 w-56 rounded-md border border-gray-100 bg-white shadow-lg ${navButtonStyle}`}
+              role="menu"
+            >
+              <div className="p-2">
+                <a
+                  href="#"
+                  className="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700"
+                  role="menuitem"
+                >
+                  2023 Season
+                </a>
               </div>
             </div>
           </div>
